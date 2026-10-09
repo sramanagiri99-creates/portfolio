@@ -51,10 +51,23 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Case-study video — play only while it's on screen
+document.addEventListener('DOMContentLoaded', function () {
+  const videos = document.querySelectorAll('.st-frame-video video');
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) entry.target.play().catch(function () {});
+      else entry.target.pause();
+    });
+  }, { threshold: 0.25 });
+  videos.forEach(function (v) { io.observe(v); });
+});
+
 // Reveal on scroll — subtle fade-up as blocks enter the viewport
 document.addEventListener('DOMContentLoaded', function () {
   const targets = document.querySelectorAll(
-    '.section-head, .about-grid, .linkedin-grid, .skill-card, .job, .case, .phase, .takeaway, .feature, .testimonial, .contact-panel, .hero-feats'
+    '.section-head, .st-block, .st-frame, .about-grid, .linkedin-grid, .skill-card, .job, .case, .phase, .takeaway, .feature, .testimonial, .contact-panel, .hero-feats'
   );
   if (!('IntersectionObserver' in window)) return;
 

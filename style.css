@@ -981,30 +981,47 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .t-name { display: block; font-weight: 600; font-size: 14.5px; }
 .t-role { display: block; font-size: 12.5px; color: var(--muted); line-height: 1.45; margin-top: 2px; }
 
-/* ---------- Contact ---------- */
-.contact { padding: 40px 0 24px; }
-.contact-panel {
-  position: relative; overflow: hidden;
-  padding: 96px 40px;
-  border-radius: var(--radius-lg);
-  background: #111;
-  color: #fff;
-  text-align: center;
+/* ---------- Contact + footer (finale) ----------
+   Light and centred: headline, one line, an email pill, a quiet footer,
+   and the meadow artwork running edge to edge at the very bottom. */
+.finale { position: relative; background: #fff; padding-top: 160px; overflow: hidden; }
+.finale-inner { position: relative; z-index: 1; text-align: center; }
+.finale-title {
+  font-size: clamp(46px, 6.6vw, 92px); line-height: 1; letter-spacing: -0.045em; color: var(--ink);
 }
-.contact-panel::before {
-  content: ""; position: absolute; inset: -40% -10% auto; height: 120%;
-  background: radial-gradient(closest-side, rgba(255,255,255,.10), transparent 70%);
-  pointer-events: none;
-}
-.contact-panel > * { position: relative; }
-.contact h2 { margin-top: 22px; font-size: clamp(44px, 7vw, 88px); line-height: 1; letter-spacing: -0.045em; }
-.contact h2 em { font-size: 1.05em; }
-.contact p { max-width: 520px; margin: 22px auto 0; color: rgba(255,255,255,.65); font-size: 17px; line-height: 1.65; }
-.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+.finale-title em { font-size: 1.05em; }
+.finale-sub { max-width: 540px; margin: 26px auto 0; font-size: 18px; line-height: 1.65; color: var(--muted); }
 
-/* ---------- Footer ---------- */
-.footer { padding: 32px 0 40px; }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 13px; color: var(--muted); }
+.finale-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 40px; padding: 6px 6px 6px 20px;
+  background: #fff; border: 1px solid var(--line-strong); border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(17,17,17,.04), 0 12px 30px -16px rgba(17,17,17,.22);
+}
+.finale-pill-text { display: inline-flex; align-items: center; gap: 10px; font-size: 16px; color: var(--ink-2); padding-right: 10px; }
+.finale-pill-text svg { width: 17px; height: 17px; color: var(--muted); }
+.finale-pill-btn {
+  display: inline-flex; align-items: center; height: 44px; padding: 0 22px;
+  border-radius: 999px; background: #161616; color: #fff;
+  font-size: 15px; font-weight: 500; white-space: nowrap;
+  box-shadow: var(--shadow-btn);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.finale-pill-btn:hover { transform: translateY(-1px); box-shadow: 0 1px 2px rgba(0,0,0,.2), 0 16px 30px -10px rgba(0,0,0,.5); }
+
+.finale-foot { margin-top: 88px; }
+.finale-made { font-size: 15px; color: var(--muted); }
+.finale-made em { color: var(--ink); font-size: 1.12em; }
+.finale-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 26px; margin-top: 14px; }
+.finale-links a { font-size: 15px; color: var(--muted); transition: color .2s; }
+.finale-links a:hover { color: var(--ink); }
+
+/* meadow: footer.png cropped to its greenery (y 480–1024), full width, no box */
+.finale-art { position: relative; margin-top: -40px; aspect-ratio: 1536 / 544; pointer-events: none; }
+.finale-art img {
+  position: absolute; left: 0; bottom: 0; width: 100%; height: auto;
+  filter: brightness(1.02);           /* lifts the artwork's off-white backdrop to the page white */
+}
 
 /* ---------- Reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
@@ -1087,9 +1104,12 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .testimonials { columns: 1; }
   .testimonial { padding: 24px; }
   .feature-body { padding: 24px; }
-  .contact-panel { padding: 64px 22px; }
-  .contact-links .btn { width: 100%; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .finale { padding-top: 112px; }
+  .finale-pill { flex-direction: column; gap: 10px; padding: 14px; border-radius: 22px; width: 100%; }
+  .finale-pill-text { padding-right: 0; font-size: 15px; }
+  .finale-pill-btn { width: 100%; justify-content: center; }
+  .finale-foot { margin-top: 64px; }
+  .finale-art { margin-top: -10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

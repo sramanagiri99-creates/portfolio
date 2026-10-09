@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Reveal on scroll — subtle fade-up as blocks enter the viewport
 document.addEventListener('DOMContentLoaded', function () {
   const targets = document.querySelectorAll(
-    '.section-head, .st-block, .st-frame, .job-sec, .job-top, .about-grid, .linkedin-grid, .skill-card, .job, .case, .phase, .takeaway, .feature, .testimonial, .contact-panel, .hero-feats'
+    '.section-head, .st-block, .st-frame, .job-sec, .job-top, .about-grid, .linkedin-grid, .skill-card, .job, .case, .phase, .takeaway, .feature, .testimonial, .finale-inner'
   );
   if (!('IntersectionObserver' in window)) return;
 

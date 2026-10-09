@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=28">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -179,7 +179,11 @@
         </div>
       </div>
 
-      <div class="card skill-card">
+      <div class="card skill-card has-peeker">
+        <!-- character peeking over the top edge of this card; plays as it scrolls into view -->
+        <div class="peeker char-video" aria-hidden="true">
+          <video src="g0.mp4" muted loop playsinline preload="auto"></video>
+        </div>
         <div class="icon-tile"><svg><use href="#icon-workflow"/></svg></div>
         <h3>Funnels &amp; Automation</h3>
         <div class="tagcloud">
@@ -236,10 +240,26 @@
 
     <!-- Timeline: one sleek line joins every experience; a pin marks the start of each -->
     <div class="timeline">
+      <!-- scroll train: rides the line, pauses at the end of each experience -->
+      <div class="tl-rail" aria-hidden="true">
+        <div class="tl-progress"></div>
+        <div class="tl-train">
+          <svg viewBox="0 0 32 40" width="32" height="40">
+            <rect x="3" y="2" width="26" height="30" rx="8" fill="#161616"/>
+            <rect x="7" y="6" width="18" height="11" rx="3" fill="#fff1b8"/>
+            <rect x="11" y="3.4" width="10" height="1.6" rx=".8" fill="#fff1b8" opacity=".5"/>
+            <circle cx="9.5" cy="24" r="2.2" fill="#fff"/>
+            <circle cx="22.5" cy="24" r="2.2" fill="#fff"/>
+            <rect x="13" y="22.6" width="6" height="2.8" rx="1.4" fill="#3a3a3a"/>
+            <path d="M6 32 L3 38 M26 32 L29 38" stroke="#161616" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="tl-train-label">6 to go</span>
+        </div>
+      </div>
 
     <!-- ============ RABBLEHUB — long-form case study ============ -->
     <article class="study tl-item" id="rabblehub">
-      <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
+      <img class="tl-pin" src="work-pin.png" alt="" aria-hidden="true">
 
       <!-- Intro -->
       <header class="st-intro">
@@ -269,7 +289,7 @@
             <div class="st-num">00</div>
             <h4 class="st-title">At a glance</h4>
             <!-- character looks through her telescope toward the numbers; plays as it scrolls into view -->
-            <div class="st-glance-char" aria-hidden="true">
+            <div class="st-glance-char char-video" aria-hidden="true">
               <video src="g1.mp4" muted loop playsinline preload="auto"></video>
             </div>
           </div>
@@ -515,7 +535,7 @@
     <!-- 2. GOOCAMPUS -->
     <details class="job tl-item">
       <summary class="job-head">
-        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
+        <img class="tl-pin" src="work-pin.png" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">GooCampus</span>
           <span class="job-role">Marketing Lead</span>
@@ -556,7 +576,7 @@
     <!-- 3. RESUME RISERS -->
     <details class="job tl-item">
       <summary class="job-head">
-        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
+        <img class="tl-pin" src="work-pin.png" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">Resume Risers</span>
           <span class="job-role">Marketing Manager · Co-Founder</span>
@@ -593,7 +613,7 @@
     <!-- 4. FIRST SIP -->
     <details class="job tl-item">
       <summary class="job-head">
-        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
+        <img class="tl-pin" src="work-pin.png" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">First Sip</span>
           <span class="job-role">Social Media Manager · Co-Founder</span>
@@ -615,7 +635,7 @@
     <!-- 5. CLEAN HOMIES -->
     <details class="job tl-item">
       <summary class="job-head">
-        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
+        <img class="tl-pin" src="work-pin.png" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">Clean Homies</span>
           <span class="job-role">Content Marketer</span>
@@ -637,7 +657,7 @@
     <!-- 6. OTHER EXPERIENCES -->
     <details class="job tl-item">
       <summary class="job-head">
-        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
+        <img class="tl-pin" src="work-pin.png" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">Other Experiences</span>
           <span class="job-role">Freelance Marketing &amp; Content Roles</span>
@@ -892,6 +912,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=19"></script>
+<script src="script.js?v=20"></script>
 </body>
 </html>

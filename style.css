@@ -579,20 +579,61 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 #work .chip { background: rgba(255,255,255,.7); }
 
 .timeline { position: relative; padding-left: 84px; }
-/* the line: starts at the first pin, fades out after the last job */
+/* the line: starts at the first pin's needle, fades out after the last job */
 .timeline::before {
-  content: ""; position: absolute; left: 27px; top: 34px; bottom: 0; width: 1px;
-  background: linear-gradient(to bottom, rgba(17,17,17,.22) 0%, rgba(17,17,17,.22) 92%, rgba(17,17,17,0) 100%);
+  content: ""; position: absolute; left: 27px; top: 18px; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, rgba(17,17,17,.2) 0%, rgba(17,17,17,.2) 94%, rgba(17,17,17,0) 100%);
 }
 .tl-item { position: relative; }
+/* pin: needle tip sits exactly on the line at heading height
+   (tip is at 7.6% / 98.6% of the cropped image) */
 .tl-pin {
-  position: absolute; left: -84px; top: -14px;
-  width: 44px; height: auto;
-  mix-blend-mode: multiply;   /* drops the pin's white background onto the yellow */
+  position: absolute; z-index: 2;
+  left: -62px; top: -73px;
+  width: 76px; height: auto;
+  /* transparent PNG cut-out, so the shadow follows the pin itself */
   pointer-events: none;
-  transform: rotate(-6deg);
+  filter: drop-shadow(0 6px 6px rgba(60, 45, 0, .12));
 }
-.job.tl-item .tl-pin { top: 10px; }
+.job.tl-item .tl-pin { top: -57px; }
+
+/* scroll train ------------------------------------------------------------ */
+.tl-rail { position: absolute; left: 0; top: 18px; bottom: 0; width: 56px; pointer-events: none; z-index: 1; }
+.tl-progress {
+  position: absolute; left: 26px; top: 0; width: 3px; height: 0;
+  border-radius: 2px; background: #161616;
+}
+.tl-station {
+  position: absolute; left: 27px; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
+  border-radius: 50%; background: #fffcee; border: 1.5px solid rgba(17,17,17,.35);
+  transition: background .3s, border-color .3s;
+}
+.tl-station.is-passed { background: #161616; border-color: #161616; }
+.tl-train {
+  position: absolute; left: 11px; top: 0;
+  width: 32px; margin-top: -20px;
+  will-change: transform;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,.18));
+}
+.tl-train svg { display: block; }
+.tl-train-label {
+  position: absolute; top: 44px; left: 50%; transform: translateX(-50%);
+  padding: 2px 8px; border-radius: 999px;
+  background: #161616; color: #fff;
+  font-size: 10.5px; font-weight: 600; white-space: nowrap; letter-spacing: .01em;
+}
+
+/* Skills — character peeking over the Funnels & Automation card ------------ */
+#skills .section-head { margin-bottom: 104px; }
+.has-peeker { position: relative; }
+.peeker {
+  position: absolute; left: 50%; bottom: calc(100% + 1px);   /* sit on top of the 1px border, not over it */
+  width: 184px; aspect-ratio: 631 / 462; transform: translateX(-50%);
+  overflow: hidden; pointer-events: none;
+  filter: brightness(1.05);   /* lifts the video's light-grey backdrop to pure white */
+}
+/* crop the 1080x1350 frame to x 236–867, y 400–862 — she's cut exactly at the "desk" edge */
+.peeker video { position: absolute; width: 171.16%; max-width: none; height: auto; left: -37.4%; top: -86.58%; }
 
 /* "At a glance" — telescope character facing the numbers */
 .st-glance-left { position: static !important; }   /* not sticky: keeps the blend with the yellow intact */
@@ -608,14 +649,27 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 @media (max-width: 960px) {
   .timeline { padding-left: 52px; }
   .timeline::before { left: 17px; top: 26px; }
-  .tl-pin { left: -52px; width: 34px; top: -8px; }
-  .job.tl-item .tl-pin { top: 14px; }
+  .tl-pin { left: -38px; width: 56px; top: -53px; }
+  .job.tl-item .tl-pin { top: -33px; }
+  .tl-rail { top: 14px; }
+  .tl-progress { left: 16px; }
+  .tl-station { left: 17px; }
+  .tl-train { left: 3px; }
+  .peeker { width: 160px; }
   .st-glance-char { width: 170px; margin-top: 20px; }
 }
 @media (max-width: 640px) {
-  .timeline { padding-left: 36px; }
-  .timeline::before { left: 11px; }
-  .tl-pin { left: -38px; width: 28px; }
+  .timeline { padding-left: 40px; }
+  .timeline::before { left: 14px; top: 12px; }
+  .tl-pin { left: -29px; width: 42px; top: -38px; }
+  .job.tl-item .tl-pin { top: -20px; }
+  .tl-rail { top: 12px; }
+  .tl-progress { left: 13px; }
+  .tl-station { left: 14px; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; }
+  .tl-train { left: 2px; width: 24px; margin-top: -15px; }
+  .tl-train svg { width: 24px; height: 30px; }
+  .tl-train-label { display: none; }
+  #skills .section-head { margin-bottom: 120px; }
 }
 
 /* ---------- Case studies ---------- */
@@ -744,6 +798,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
+  /* the peeking character needs open space above her card: lead with it when cards stack */
+  .has-peeker { order: -1; }
   .nav-links a { padding: 8px 9px; font-size: 13px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials { columns: 2; }

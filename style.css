@@ -624,11 +624,11 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 }
 
 /* Skills — character peeking over the Funnels & Automation card ------------ */
-#skills .section-head { margin-bottom: 104px; }
+#skills .section-head { margin-bottom: 128px; }
 .has-peeker { position: relative; }
 .peeker {
   position: absolute; left: 50%; bottom: calc(100% + 1px);   /* sit on top of the 1px border, not over it */
-  width: 184px; aspect-ratio: 631 / 462; transform: translateX(-50%);
+  width: 290px; aspect-ratio: 631 / 462; transform: translateX(-50%);
   overflow: hidden; pointer-events: none;
   filter: brightness(1.05);   /* lifts the video's light-grey backdrop to pure white */
 }
@@ -655,7 +655,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .tl-progress { left: 16px; }
   .tl-station { left: 17px; }
   .tl-train { left: 3px; }
-  .peeker { width: 160px; }
+  .peeker { width: 250px; }
   .st-glance-char { width: 170px; margin-top: 20px; }
 }
 @media (max-width: 640px) {
@@ -669,7 +669,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .tl-train { left: 2px; width: 24px; margin-top: -15px; }
   .tl-train svg { width: 24px; height: 30px; }
   .tl-train-label { display: none; }
-  #skills .section-head { margin-bottom: 120px; }
+  #skills .section-head { margin-bottom: 196px; }
+  .peeker { width: 230px; }
 }
 
 /* ---------- Case studies ---------- */

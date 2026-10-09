@@ -579,7 +579,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
    (tip is at 6.1% / 99.2% of the cut-out image) */
 .tl-pin {
   position: absolute; z-index: 3;
-  left: -62px; top: -73px;
+  left: -62px; top: -25px;
   width: 76px; height: auto;
   pointer-events: none;
   filter: drop-shadow(0 6px 6px rgba(60, 45, 0, .12));
@@ -589,7 +589,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 /* one rail per experience: starts at its pin, ends with it — then a gap ---------- */
 .tl-rail {
   position: absolute; pointer-events: none;
-  left: -84px; width: 56px; top: 18px; bottom: 0;
+  left: -84px; width: 56px; top: 66px; bottom: 0;
+  opacity: 0; visibility: hidden; transition: opacity .7s var(--ease), visibility 0s .7s;
 }
 .job.tl-item > .tl-rail { top: 52px; }
 .tl-rail::before {           /* the track */
@@ -724,9 +725,9 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 
 @media (max-width: 960px) {
   .timeline { padding-left: 52px; }
-  .tl-pin { left: -38px; width: 56px; top: -53px; }
+  .tl-pin { left: -38px; width: 56px; }
   .job.tl-item .tl-pin { top: -23px; }
-  .tl-rail { left: -52px; top: 14px; width: 40px; }
+  .tl-rail { left: -52px; width: 40px; }
   .job.tl-item > .tl-rail { top: 44px; }
   .tl-rail::before, .tl-progress, .tl-station { left: 17px; }
   .tl-progress { left: 16px; }
@@ -740,9 +741,9 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 }
 @media (max-width: 640px) {
   .timeline { padding-left: 40px; }
-  .tl-pin { left: -29px; width: 42px; top: -38px; }
+  .tl-pin { left: -29px; width: 42px; }
   .job.tl-item .tl-pin { top: -14px; }
-  .tl-rail { left: -40px; top: 12px; width: 30px; }
+  .tl-rail { left: -40px; width: 30px; }
   .job.tl-item > .tl-rail { top: 36px; }
   .tl-rail::before, .tl-station { left: 14px; }
   .tl-progress { left: 13px; }
@@ -753,6 +754,95 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .peeker { width: 290px; }
   #skills .section-head { margin-bottom: 250px; }
   .hi-peek-frame { width: 270px; }
+}
+
+/* rail + dragon only exist for an opened experience, and fade in a beat after it opens */
+.study.rail-on > .tl-rail { opacity: 1; visibility: visible; transition: opacity .9s var(--ease), visibility 0s; }
+
+/* ---------- Work experience cards (3D, collapsible) ---------- */
+.timeline > .study + .study { margin-top: 64px; }
+.study {
+  /* inside the white card, hairlines and frames go back to neutral greys */
+  --line: #ebebea; --line-strong: #dcdcda; --bg-soft: #f7f7f5;
+  background: #fff;
+  border: 1px solid rgba(84, 66, 0, .10);
+  border-radius: 30px;
+  padding: 52px 56px 44px;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.9) inset,
+    0 1px 2px rgba(60, 45, 0, .05),
+    0 14px 28px -14px rgba(60, 45, 0, .16),
+    0 44px 80px -40px rgba(60, 45, 0, .26);
+  transform: perspective(1600px) rotateX(0deg) translateY(0);
+  transform-origin: center top;
+  transition: transform .6s var(--ease), box-shadow .6s var(--ease);
+}
+.study:not(.is-open) { cursor: pointer; }
+.study:not(.is-open):hover {
+  transform: perspective(1600px) rotateX(2.2deg) translateY(-6px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.9) inset,
+    0 2px 4px rgba(60, 45, 0, .06),
+    0 22px 40px -18px rgba(60, 45, 0, .2),
+    0 70px 110px -50px rgba(60, 45, 0, .34);
+}
+.study.is-open { transform: none; cursor: auto; }
+
+/* the toggle */
+.study-toggle {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-top: 32px; padding: 8px 8px 8px 22px; height: 52px;
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  background: #fff; color: var(--ink);
+  font: 500 15px/1 var(--sans); cursor: pointer;
+  box-shadow: 0 1px 2px rgba(17,17,17,.05), 0 10px 22px -14px rgba(17,17,17,.3);
+  transition: border-color .2s, transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.study-toggle:hover { border-color: var(--ink); transform: translateY(-1px); }
+.study-toggle-icon {
+  width: 36px; height: 36px; display: grid; place-items: center;
+  border-radius: 50%; background: #161616; color: #fff;
+  transition: transform .45s var(--ease);
+}
+.study-toggle-icon svg { width: 16px; height: 16px; }
+.study:not(.is-open) .study-toggle-icon { animation: nudge 2.6s var(--ease) infinite; }
+@keyframes nudge { 0%, 70%, 100% { transform: scale(1); } 80% { transform: scale(1.12); } 90% { transform: scale(.96); } }
+.study.is-open .st-intro .study-toggle { display: none; }
+.study-toggle-close .study-toggle-icon { transform: rotate(45deg); }
+.study-close { display: flex; justify-content: center; padding: 8px 0 12px; }
+.study-close .study-toggle { margin-top: 0; }
+
+/* the unfolding body */
+.study-body {
+  display: grid; grid-template-rows: 0fr; grid-template-columns: minmax(0, 1fr);   /* never wider than the card */
+  transition: grid-template-rows .9s var(--ease);
+}
+.study-body-inner { min-height: 0; min-width: 0; overflow: hidden; visibility: hidden; transition: visibility 0s .9s; }
+.study.is-open .study-body { grid-template-rows: 1fr; }
+.study.is-open .study-body-inner { visibility: visible; transition: visibility 0s; }
+/* once fully open, let sticky columns and characters behave normally */
+.study.is-expanded .study-body-inner { overflow: visible; }
+.study-body-inner > .st-frame-video { margin-top: 48px; }
+.study-body-inner > .st-block:first-of-type { margin-top: 64px; }
+
+/* characters inside a white card: their cream backdrop maps to white, not yellow */
+.study .funnel-frame video { filter: url(#cream-to-white); }
+
+/* names sized to the card's column so the link arrow stays beside them */
+.study .st-name { font-size: clamp(40px, 4.6vw, 64px); }
+.study .st-name-sm { font-size: clamp(34px, 3.6vw, 50px); }
+
+@media (max-width: 960px) {
+  .study { padding: 36px 30px 32px; border-radius: 24px; }
+  .tl-pin { top: -18px; }
+  .tl-rail { top: 50px; }
+}
+@media (max-width: 640px) {
+  .study { padding: 28px 20px 24px; border-radius: 20px; }
+  .timeline > .study + .study { margin-top: 44px; }
+  .tl-pin { top: -14px; }
+  .tl-rail { top: 36px; }
+  .study-toggle { width: 100%; justify-content: space-between; }
 }
 
 /* sleek rule between experiences */

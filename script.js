@@ -150,12 +150,13 @@ document.addEventListener('DOMContentLoaded', function () {
   let ticking = false;
   function update() {
     const marker = window.innerHeight * 0.55;
-    let nextActive = 0;
+    let nextActive = -1;
     rails.forEach(function (r, i) {
       const raw = marker - r.el.getBoundingClientRect().top;
       r.target = mapToTrack(Math.max(0, Math.min(raw, r.height + 400)), r.stations, r.start);
       r.reached = raw >= r.start;
-      if (raw >= 0) nextActive = i;      // the last rail whose start has been reached
+      // the last *opened* rail whose start has been reached
+      if (raw >= 0 && r.item.classList.contains('rail-on')) nextActive = i;
     });
     if (nextActive !== active) {
       rails.forEach(function (r, i) {
@@ -199,9 +200,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', measure);
+  window.addEventListener('timeline:change', measure);
   window.addEventListener('load', measure);
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(timeline);
   measure();
+});
+
+// Work experience cards — closed by default. "Click to open" unfolds the full case study;
+// its line and dragon fade in a beat later. "Close" folds it back and returns to the card.
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.study').forEach(function (study) {
+    const toggles = study.querySelectorAll('.study-toggle');
+    const body = study.querySelector('.study-body');
+    let railTimer = null;
+
+    function setOpen(open) {
+      study.classList.toggle('is-open', open);
+      toggles.forEach(function (t) { t.setAttribute('aria-expanded', String(open)); });
+      clearTimeout(railTimer);
+      if (open) {
+        railTimer = setTimeout(function () {
+          study.classList.add('rail-on');
+          window.dispatchEvent(new Event('timeline:change'));
+        }, 1100);
+      } else {
+        study.classList.remove('rail-on', 'is-expanded');
+        study.querySelectorAll('video').forEach(function (v) { v.pause(); });
+      }
+      window.dispatchEvent(new Event('timeline:change'));
+    }
+
+    body.addEventListener('transitionend', function (e) {
+      if (e.target !== body || e.propertyName !== 'grid-template-rows') return;
+      if (study.classList.contains('is-open')) study.classList.add('is-expanded');
+      window.dispatchEvent(new Event('timeline:change'));
+    });
+
+    toggles.forEach(function (t) {
+      t.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const closing = study.classList.contains('is-open');
+        setOpen(!closing);
+        if (closing) study.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // the whole closed card is clickable (links inside still work as links)
+    study.addEventListener('click', function (e) {
+      if (study.classList.contains('is-open') || e.target.closest('a, button')) return;
+      setOpen(true);
+    });
+  });
 });
 
 // Reveal on scroll — subtle fade-up as blocks enter the viewport

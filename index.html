@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=22">
+<link rel="stylesheet" href="style.css?v=24">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -234,14 +234,15 @@
       <h2 class="section-title">Work <em>Experiences</em></h2>
     </div>
 
-    <!-- ============ 01. RABBLEHUB — long-form case study ============
-         Image slots: drop a file with the named filename into the site folder
-         and it appears automatically (until then a quiet placeholder shows). -->
-    <article class="study" id="rabblehub">
+    <!-- Timeline: one sleek line joins every experience; a pin marks the start of each -->
+    <div class="timeline">
+
+    <!-- ============ RABBLEHUB — long-form case study ============ -->
+    <article class="study tl-item" id="rabblehub">
+      <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
 
       <!-- Intro -->
       <header class="st-intro">
-        <div class="st-eyebrow">01 — Case study</div>
         <div class="st-grid">
           <div class="st-left">
             <h3 class="st-name"><a class="ig-link" href="https://www.instagram.com/rabblehub/?hl=en" target="_blank" rel="noopener">RabbleHub<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
@@ -264,9 +265,13 @@
       <!-- 00 — At a glance -->
       <section class="st-block">
         <div class="st-grid">
-          <div class="st-left">
+          <div class="st-left st-glance-left">
             <div class="st-num">00</div>
             <h4 class="st-title">At a glance</h4>
+            <!-- character looks through her telescope toward the numbers; plays as it scrolls into view -->
+            <div class="st-glance-char" aria-hidden="true">
+              <video src="g1.mp4" muted loop playsinline preload="auto"></video>
+            </div>
           </div>
           <div class="st-right">
             <div class="st-stats">
@@ -297,12 +302,6 @@
             <p>We wanted to see if we could build something that went beyond simply telling people to apply to more jobs. The goal was to genuinely make the process easier and more effective.</p>
           </div>
         </div>
-        <figure class="st-posts">
-          <img src="rh-post-relationship.jpg" alt="RabbleHub post: Is job hunting your longest relationship? It's time to break up." loading="lazy">
-          <img src="rh-post-dream-job.jpg" alt="RabbleHub post: get your dream job" loading="lazy">
-          <img src="rh-post-7-ways.jpg" alt="RabbleHub post: The 7 right ways to look for jobs in 2026" loading="lazy">
-          <figcaption>From the <a class="ig-link" href="https://www.instagram.com/rabblehub/?hl=en" target="_blank" rel="noopener">@rabblehub</a> feed</figcaption>
-        </figure>
       </section>
 
       <!-- 02 — From the first offer to what actually worked -->
@@ -406,14 +405,6 @@
             <div><span class="st-step">5</span><strong>Service</strong></div>
           </div>
         </div>
-        <figure class="st-frame st-magnets">
-          <div class="st-frame-head"><span class="st-label">Step 2 — the free resource</span><span class="st-frame-note">Something useful first, the paid service second</span></div>
-          <div class="st-posts st-posts-tight">
-            <img src="rh-post-ai-tools.jpg" alt="Free resource: 52 Must Know AI Tools for all job-seekers in 2026" loading="lazy">
-            <img src="rh-post-linkedin.jpg" alt="Free resource: 13 ways to use LinkedIn to get jobs in this economy" loading="lazy">
-            <img src="rh-post-free-call.jpg" alt="Lead offer: Lost in your career? Speak to an expert for free" loading="lazy">
-          </div>
-        </figure>
 
         <div class="st-callouts">
           <div><span class="st-stat">Up to 30%</span><p>This change increased conversion rates by <strong>up to 30%</strong>.</p></div>
@@ -522,9 +513,9 @@
     <div class="jobs">
 
     <!-- 2. GOOCAMPUS -->
-    <details class="job">
+    <details class="job tl-item">
       <summary class="job-head">
-        <span class="job-num">02</span>
+        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">GooCampus</span>
           <span class="job-role">Marketing Lead</span>
@@ -563,9 +554,9 @@
     </details>
 
     <!-- 3. RESUME RISERS -->
-    <details class="job">
+    <details class="job tl-item">
       <summary class="job-head">
-        <span class="job-num">03</span>
+        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">Resume Risers</span>
           <span class="job-role">Marketing Manager · Co-Founder</span>
@@ -600,9 +591,9 @@
     </details>
 
     <!-- 4. FIRST SIP -->
-    <details class="job">
+    <details class="job tl-item">
       <summary class="job-head">
-        <span class="job-num">04</span>
+        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">First Sip</span>
           <span class="job-role">Social Media Manager · Co-Founder</span>
@@ -622,9 +613,9 @@
     </details>
 
     <!-- 5. CLEAN HOMIES -->
-    <details class="job">
+    <details class="job tl-item">
       <summary class="job-head">
-        <span class="job-num">05</span>
+        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">Clean Homies</span>
           <span class="job-role">Content Marketer</span>
@@ -644,9 +635,9 @@
     </details>
 
     <!-- 6. OTHER EXPERIENCES -->
-    <details class="job">
+    <details class="job tl-item">
       <summary class="job-head">
-        <span class="job-num">06</span>
+        <img class="tl-pin" src="work-pin.jpg" alt="" aria-hidden="true">
         <span class="job-title">
           <span class="job-name">Other Experiences</span>
           <span class="job-role">Freelance Marketing &amp; Content Roles</span>
@@ -673,6 +664,8 @@
     </details>
 
     </div>
+
+    </div><!-- /.timeline -->
   </div>
 </section>
 
@@ -899,6 +892,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=18"></script>
+<script src="script.js?v=19"></script>
 </body>
 </html>

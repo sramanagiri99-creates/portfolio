@@ -64,6 +64,25 @@ document.addEventListener('DOMContentLoaded', function () {
   videos.forEach(function (v) { io.observe(v); });
 });
 
+// "At a glance" character — restarts from the first frame each time you scroll
+// down into it, keeps looping while it's on screen, pauses once it's out of view
+document.addEventListener('DOMContentLoaded', function () {
+  const video = document.querySelector('.st-glance-char video');
+  if (!video || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        // entering from below the fold = the reader is scrolling down
+        if (entry.boundingClientRect.top > 0) video.currentTime = 0;
+        video.play().catch(function () {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.35 });
+  io.observe(video.parentElement);
+});
+
 // Reveal on scroll — subtle fade-up as blocks enter the viewport
 document.addEventListener('DOMContentLoaded', function () {
   const targets = document.querySelectorAll(

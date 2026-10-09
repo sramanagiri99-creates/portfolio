@@ -184,80 +184,49 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .section-sub { margin-top: 18px; color: var(--muted); font-size: 17px; line-height: 1.65; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 64px 0 40px; }
+.hero { padding: 24px 0 24px; }
 .hero-grid {
-  display: grid; grid-template-columns: 1.25fr .85fr;
-  gap: 64px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: end;
+  min-height: min(640px, calc(100vh - 220px));
 }
-.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
-.hero-kicker { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--muted); margin-bottom: 4px; }
-.hero-name {
-  font-size: clamp(72px, 11vw, 148px);
-  line-height: .9;
-  letter-spacing: -0.055em;
+.hero-copy { align-self: start; padding: 72px 0 0 6%; max-width: 560px; }
+.hero-title {
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   font-weight: 500;
-  margin-left: -.04em;
 }
+.hero-title .ig-link { border-bottom: 1px solid var(--line-strong); }
+.hero-title .ig-link:hover { border-bottom-color: var(--ink); }
 .hero-headline {
-  margin-top: 28px;
-  max-width: 560px;
-  font-family: var(--display);
-  font-size: clamp(22px, 2.3vw, 28px);
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  color: var(--ink-2);
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
 }
-.hero-headline em { color: var(--ink); font-size: 1.1em; }
-.hero-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: 28px; font-size: 14px; color: var(--muted); }
-.hero-role { color: var(--ink); font-weight: 500; }
-.status { display: inline-flex; align-items: center; gap: 8px; }
+.hero-headline em { color: var(--ink); font-size: 1.12em; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; font-size: 15px; color: var(--faint); }
+.hero-links a { color: var(--ink); border-bottom: 1px solid transparent; transition: border-color .2s; }
+.hero-links a:hover { border-bottom-color: var(--ink); }
+.status { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 13.5px; color: var(--muted); }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(34,160,107,.15); animation: pulse 2.4s ease-in-out infinite; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(34,160,107,.05); } }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
 
-.hero-visual { display: flex; justify-content: center; }
-.portrait {
-  position: relative;
-  width: 100%; max-width: 380px;
-  aspect-ratio: 4 / 5.3;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  transform: rotate(1.5deg);
-  transition: transform .6s var(--ease);
+/* Cut-out monochrome portrait: no frame, no background — it sits straight on the page and fades out at the bottom */
+.hero-visual { display: flex; justify-content: center; align-self: end; }
+.hero-visual img {
+  /* the side and bottom fade is baked into the PNG's alpha, so no CSS mask is needed */
+  width: 100%; max-width: 470px; height: auto;
 }
-.portrait:hover { transform: rotate(0deg); }
-.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-.portrait::after {
-  content: ""; position: absolute; inset: auto 0 0 0; height: 40%;
-  background: linear-gradient(to top, rgba(0,0,0,.55), transparent);
-  pointer-events: none;
-}
-.portrait-label {
-  position: absolute; left: 16px; bottom: 16px; z-index: 1;
-  display: flex; align-items: center; gap: 9px;
-  color: #fff; font-size: 13.5px; font-weight: 500;
-}
-.portrait-mark {
-  width: 22px; height: 22px; display: grid; place-items: center;
-  background: #fff; color: #111; border-radius: 6px;
-  font-family: var(--serif); font-size: 14px;
-}
-.portrait-label .icon-external { opacity: .7; }
 
-.brand-strip {
-  display: flex; align-items: center; gap: 40px;
-  margin-top: 88px; padding-top: 32px;
-  border-top: 1px solid var(--line);
+.hero-feats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+  padding: 48px 0 0 3%;
 }
-.brand-strip-label { font-size: 12.5px; color: var(--muted); line-height: 1.4; max-width: 140px; flex-shrink: 0; }
-.brand-strip-names { display: flex; flex-wrap: wrap; gap: 14px 40px; }
-.brand-strip-names span {
-  font-family: var(--display); font-size: 17px; font-weight: 500; letter-spacing: -0.02em;
-  color: #9a9a9a;
-  transition: color .2s;
-}
-.brand-strip-names span:hover { color: var(--ink); }
+.hero-feat svg { width: 24px; height: 24px; color: var(--ink); }
+.hero-feat h3 { margin: 16px 0 8px; font-size: 16.5px; line-height: 1.3; letter-spacing: -0.015em; }
+.hero-feat p { font-size: 13.5px; line-height: 1.6; color: var(--muted); }
 
 /* ---------- About ---------- */
 .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
@@ -270,15 +239,6 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   letter-spacing: -0.02em; color: var(--ink); margin-bottom: 28px;
 }
 .about-text .lead strong { font-weight: 500; font-family: var(--serif); font-style: italic; font-size: 1.1em; }
-.stat-row {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  margin-top: 48px;
-  border-top: 1px solid var(--line);
-}
-.stat { padding: 24px 16px 0 0; }
-.stat + .stat { padding-left: 20px; border-left: 1px solid var(--line); }
-.stat-num { font-family: var(--display); font-size: clamp(26px, 2.8vw, 34px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
-.stat-label { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.4; }
 
 /* ---------- LinkedIn ---------- */
 .linkedin-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 72px; align-items: center; }
@@ -547,9 +507,10 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 
   .section { padding: 88px 0; }
   .section-head { margin-bottom: 48px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-  .hero-visual { justify-content: flex-start; }
-  .portrait { max-width: 340px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; min-height: 0; }
+  .hero-copy { padding: 40px 0 0; }
+  .hero-visual img { max-width: 400px; }
+  .hero-feats { grid-template-columns: repeat(2, 1fr); gap: 32px; padding-left: 0; }
   .about-grid, .linkedin-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-head { position: static; }
   .phases { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
@@ -566,15 +527,9 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .nav-inner { height: 64px; gap: 10px; }
   .nav-links { top: 64px; }
   .nav-cta { height: 36px; padding: 0 14px; font-size: 13px; }
-  .hero { padding-top: 40px; }
-  .hero-badges { margin-bottom: 24px; }
-  .hero-actions .btn { flex: 1; }
-  .portrait { max-width: none; transform: none; }
-  .brand-strip { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 56px; }
-  .brand-strip-names { gap: 10px 24px; }
-  .brand-strip-names span { font-size: 15px; }
-  .stat-row { grid-template-columns: repeat(2, 1fr); }
-  .stat:nth-child(3) { padding-left: 0; border-left: 0; }
+  .hero-copy { padding-top: 24px; }
+  .hero-visual img { max-width: 320px; }
+  .hero-feats { gap: 28px 20px; padding-top: 32px; }
   .skills-grid { grid-template-columns: 1fr; }
   .skill-card { padding: 24px; }
   .marquee { flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 56px; }

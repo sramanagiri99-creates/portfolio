@@ -3,55 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
-<link rel="stylesheet" href="style.css?v=18">
+<title>Sramana — Portfolio</title>
+<meta name="description" content="Sramana — Growth Marketer & Brand Strategist. Founder, RabbleHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=19">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
 <svg style="display:none" aria-hidden="true">
   <defs>
-    <symbol id="icon-rupee" viewBox="0 0 24 24"><path d="M6 4h12M6 9h12M6 4c5 0 8 2 8 5s-3 5-8 5h-1l9 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-team" viewBox="0 0 24 24"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M12 20c0-2.8 2-5.2 4.7-5.9A6 6 0 0 1 22 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8V4m-3 0h6M9 13v2m6-2v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12l5-5 4 3 3-3 4 4-4 4-3-3-3 3M12 15l3 3M9 12l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-cv" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="icon-chart-up" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></symbol>
-    <symbol id="icon-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a2 2 0 0 0 2 2h1l2 6h2l-1-6h2l9 4V5l-9 4H6a2 2 0 0 0-2 2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-    <symbol id="icon-workflow" viewBox="0 0 24 24"><path d="M4 6h6l3 3h7M4 18h6l3-3h7M17 3l3 3-3 3M17 15l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-palette" viewBox="0 0 24 24"><path d="M12 3a9 8 0 1 0 0 16c1.5 0 2-1 2-2s-.5-1.5-.5-2.3c0-.9.7-1.7 1.7-1.7H17a4 4 0 0 0 4-4c0-3.3-4-6-9-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="11" r="1" fill="currentColor"/><circle cx="11" cy="8" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/></symbol>
-    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="icon-seo" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M20 20l-5.5-5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="icon-jar" viewBox="0 0 24 24"><path d="M8 3h8v3H8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 6h10l1 3v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9l1-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 11h14" stroke="currentColor" stroke-width="1.8"/></symbol>
-    <symbol id="icon-clapper" viewBox="0 0 24 24"><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 9l1.5-5h4L7 9M10 9l1.5-5h4L14 9M17 9l1.5-5h3L20 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-spray" viewBox="0 0 24 24"><path d="M9 8h5v13a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 8V5h3v3M13 5l3-2M17 6l2-1M18 9h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="currentColor"/></symbol>
-    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><path d="M7.2 9.8h2.6v7.4H7.2V9.8Zm1.3-4.2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.6 9.8h2.5v1c.35-.6 1.2-1.25 2.5-1.25 2.6 0 3.1 1.6 3.1 3.7v3.95h-2.6v-3.5c0-.85-.02-1.95-1.2-1.95-1.2 0-1.4.9-1.4 1.9v3.55h-2.6V9.8Z" fill="#fff"/></symbol>
-    <symbol id="icon-quote" viewBox="0 0 24 24"><path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H5.5C5.5 10.5 6.6 9.5 8 9.3V8Zm10 0c-2.2 0-4 1.8-4 4v5h5v-5h-2.5c0-1.5 1.1-2.5 2.5-2.7V8Z" fill="currentColor"/></symbol>
-    <symbol id="icon-pin" viewBox="0 0 40 44">
-      <ellipse cx="20" cy="40" rx="7" ry="2.3" fill="#000" opacity=".18"/>
-      <path d="M20 3a11 11 0 0 0-11 11c0 8 11 24 11 24s11-16 11-24A11 11 0 0 0 20 3Z" fill="url(#pinGrad)" stroke="#7a1010" stroke-width="1"/>
-      <ellipse cx="16.5" cy="11" rx="3.4" ry="2.2" fill="#fff" opacity=".55"/>
-      <circle cx="20" cy="14" r="5" fill="#c81e2f" stroke="#7a1010" stroke-width="1"/>
-      <line x1="20" y1="25" x2="20" y2="37" stroke="#8a8a8a" stroke-width="1.6"/>
-      <defs>
-        <radialGradient id="pinGrad" cx="35%" cy="25%" r="80%">
-          <stop offset="0%" stop-color="#ff5b5b"/>
-          <stop offset="55%" stop-color="#e23744"/>
-          <stop offset="100%" stop-color="#a3182a"/>
-        </radialGradient>
-      </defs>
-    </symbol>
+    <symbol id="icon-rupee" viewBox="0 0 24 24"><path d="M6 4h12M6 9h12M6 4c5 0 8 2 8 5s-3 5-8 5h-1l9 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-team" viewBox="0 0 24 24"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M12 20c0-2.8 2-5.2 4.7-5.9A6 6 0 0 1 22 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8V4m-3 0h6M9 13v2m6-2v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12l5-5 4 3 3-3 4 4-4 4-3-3-3 3M12 15l3 3M9 12l-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-cv" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-chart-up" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></symbol>
+    <symbol id="icon-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a2 2 0 0 0 2 2h1l2 6h2l-1-6h2l9 4V5l-9 4H6a2 2 0 0 0-2 2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="icon-workflow" viewBox="0 0 24 24"><path d="M4 6h6l3 3h7M4 18h6l3-3h7M17 3l3 3-3 3M17 15l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-palette" viewBox="0 0 24 24"><path d="M12 3a9 8 0 1 0 0 16c1.5 0 2-1 2-2s-.5-1.5-.5-2.3c0-.9.7-1.7 1.7-1.7H17a4 4 0 0 0 4-4c0-3.3-4-6-9-6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="11" r="1" fill="currentColor"/><circle cx="11" cy="8" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-seo" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-5.5-5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-trend" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.6L19.5 10l-5.7 1.6L12 17l-1.8-5.4L4.5 10l5.7-1.4L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M6.5 9.5v8M6.5 6.2v.1M10.5 17.5v-8M10.5 13c0-2 1.3-3.6 3.2-3.6s2.8 1.3 2.8 3.4v4.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-linkedin-solid" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><path d="M7.2 9.8h2.6v7.4H7.2V9.8Zm1.3-4.2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.6 9.8h2.5v1c.35-.6 1.2-1.25 2.5-1.25 2.6 0 3.1 1.6 3.1 3.7v3.95h-2.6v-3.5c0-.85-.02-1.95-1.2-1.95-1.2 0-1.4.9-1.4 1.9v3.55h-2.6V9.8Z" fill="#fff"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="logo">★ PORTFOLIO</div>
+    <a class="logo" href="#home"><span class="logo-mark">S</span><span class="logo-word">Portfolio</span></a>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -62,47 +55,79 @@
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#campaigns">Campaigns</a></li>
     </ul>
-    <a class="nav-cta" href="#contact">Contact ♥</a>
+    <a class="btn btn-dark nav-cta" href="#contact">Contact</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><svg><use href="#icon-menu"/></svg></button>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badges">
+        <span class="chip"><svg><use href="#icon-trend"/></svg>Growth &amp; Brand Strategy</span>
+        <span class="chip">Sweat the details</span>
+      </div>
+      <div class="hero-kicker">my name is</div>
+      <h1 class="hero-name">Sramana</h1>
+      <p class="hero-headline">I build <em>brands, funnels and businesses</em> that get out of their own way.</p>
+
+      <div class="hero-tags">
+        <span class="hero-role">Growth Marketer &amp; Brand Strategist</span>
+        <span class="status"><span class="dot"></span>Open to new work and good challenges</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-dark btn-lg" href="#contact">Contact Me <svg><use href="#icon-arrow-right"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="https://www.linkedin.com/in/socialgrowth-sramana-giri-/" target="_blank" rel="noopener"><svg><use href="#icon-linkedin"/></svg>LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="portrait">
+        <img src="sramana.jpg" alt="Sramana">
+        <div class="portrait-label">
+          <span class="portrait-mark">S</span>
+          <span>Founder, <a class="ig-link" href="https://www.instagram.com/rabblehub/?hl=en" target="_blank" rel="noopener">RabbleHub<svg class="icon-external"><use href="#icon-external"/></svg></a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="wrap">
-    <div class="hero-badges">
-      <span>GROWTH &amp; BRAND STRATEGY</span>
-      <span>SWEAT THE DETAILS</span>
+    <div class="brand-strip">
+      <div class="brand-strip-label">Brands I've built &amp; grown</div>
+      <div class="brand-strip-names">
+        <span>RabbleHub</span><span>GooCampus</span><span>Resume Risers</span><span>First Sip</span><span>Clean Homies</span><span>Tiggle</span>
+      </div>
     </div>
-    <div class="hero-kicker">my name is</div>
-    <h1 class="hero-name">SRAMANA</h1>
-    <div class="hero-tags">
-      <span class="pill">Growth Marketer &amp; Brand Strategist</span>
-      <span class="status"><span class="dot"></span> Open to new work and good challenges</span>
-      <span class="pill alt">Founder, <a class="ig-link" href="https://www.instagram.com/rabblehub/?hl=en" target="_blank" rel="noopener">RabbleHub<svg class="icon-external"><use href="#icon-external"/></svg></a></span>
-    </div>
-    <p class="hero-headline">I build <span class="accent">brands, funnels and businesses</span> that get out of their own way.</p>
-    <a class="btn-primary" href="#contact">✦ Contact Me</a>
   </div>
 </header>
 
 <!-- ABOUT -->
 <section class="section" id="about">
   <div class="wrap">
-    <div class="section-kicker">about me!</div>
-    <div class="section-title">what's up</div>
-
     <div class="about-grid">
-      <div class="about-photo">
-        <div class="frame"><img src="sramana.jpg" alt="Sramana" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="about-head">
+        <span class="chip">About me</span>
+        <h2 class="section-title left">What's <em>up</em></h2>
+        <div class="tagcloud">
+          <span>Growth Marketing</span>
+          <span>Funnels &amp; Performance</span>
+          <span>AI &amp; Automation</span>
+          <span>Content &amp; SEO</span>
+        </div>
       </div>
       <div class="about-text">
-        <p>Hi, I'm Sramana. I've always been fascinated by one simple question: <strong>what makes someone actually buy?</strong> I like breaking that down—from the ad or content that catches their attention, to the message that builds interest, to the funnel that gets them to take action. I've spent the last 5+ years working in marketing, mostly around growth, performance, content, funnels and everything in between. I've managed paid campaigns, built lead-generation systems, worked across multiple products, and spent a lot of time asking, "Okay, but how do we get better results?" Along the way, I've generated <strong>1,600+ leads, driven 170.45% growth in lead generation, managed ₹2–2.5L in monthly ad spends, and built a 12K+ audience on LinkedIn.</strong></p>
+        <p class="lead">Hi, I'm Sramana. I've always been fascinated by one simple question: <strong>what makes someone actually buy?</strong></p>
+        <p>I like breaking that down—from the ad or content that catches their attention, to the message that builds interest, to the funnel that gets them to take action. I've spent the last 5+ years working in marketing, mostly around growth, performance, content, funnels and everything in between. I've managed paid campaigns, built lead-generation systems, worked across multiple products, and spent a lot of time asking, "Okay, but how do we get better results?" Along the way, I've generated <strong>1,600+ leads, driven 170.45% growth in lead generation, managed ₹2–2.5L in monthly ad spends, and built a 12K+ audience on LinkedIn.</strong></p>
         <p>Lately, I've also been getting deeper into AI—experimenting with prompts, building functional websites and tools, and automating things that make work easier. This led me to build <strong>RabbleHub</strong>, where I worked on automated job applications, referral and outreach systems, and personalised CV and LinkedIn support. So while marketing is still at the core of what I do, I'm equally interested in <strong>building, experimenting, and finding smarter ways to make things work.</strong></p>
-        <div class="tagcloud">
-          <span class="tag-1">Growth Marketing</span>
-          <span class="tag-2">Funnels &amp; Performance</span>
-          <span class="tag-3">AI &amp; Automation</span>
-          <span class="tag-4">Content &amp; SEO</span>
+
+        <div class="stat-row">
+          <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Years in marketing</div></div>
+          <div class="stat"><div class="stat-num">1,600+</div><div class="stat-label">Leads generated</div></div>
+          <div class="stat"><div class="stat-num">170.45%</div><div class="stat-label">Growth in lead generation</div></div>
+          <div class="stat"><div class="stat-num">12K+</div><div class="stat-label">LinkedIn audience</div></div>
         </div>
       </div>
     </div>
@@ -110,26 +135,25 @@
 </section>
 
 <!-- LINKEDIN STRENGTH -->
-<section class="section linkedin-section" id="linkedin">
+<section class="section section-soft" id="linkedin">
   <div class="wrap">
-    <div class="section-kicker">professional strength</div>
-    <div class="section-title">LinkedIn Presence</div>
+    <div class="section-head">
+      <span class="chip">Professional strength</span>
+      <h2 class="section-title">LinkedIn <em>Presence</em></h2>
+    </div>
 
     <div class="linkedin-grid">
       <div class="linkedin-shot">
-        <div class="linkedin-shot-bar">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="linkedin-shot-bar"><span></span><span></span><span></span></div>
         <img src="LI.png" alt="Sramana Giri's LinkedIn profile">
       </div>
 
       <div class="linkedin-copy">
-        <div class="linkedin-icon-wrap"><svg class="linkedin-icon"><use href="#icon-linkedin"/></svg></div>
-        <div class="linkedin-stat">12,342<span>Followers</span></div>
+        <svg class="linkedin-icon"><use href="#icon-linkedin-solid"/></svg>
+        <div class="linkedin-stat">12,342</div>
+        <div class="linkedin-stat-label">Followers</div>
         <p>I've amassed <strong>12,342+ followers on LinkedIn</strong> through consistent personal branding—sharing what I actually know about growth, funnels and content, not just posting for the sake of it. It's become one of my strongest professional assets: a real audience that shows up, engages, and trusts what I put out.</p>
-        <a class="btn-primary linkedin-cta" href="https://www.linkedin.com/in/socialgrowth-sramana-giri-/" target="_blank" rel="noopener">
-          <svg class="icon-inline"><use href="#icon-linkedin"/></svg> View My LinkedIn
-        </a>
+        <a class="btn btn-dark btn-lg" href="https://www.linkedin.com/in/socialgrowth-sramana-giri-/" target="_blank" rel="noopener">View My LinkedIn <svg><use href="#icon-arrow-right"/></svg></a>
       </div>
     </div>
   </div>
@@ -138,648 +162,481 @@
 <!-- SKILLSETS -->
 <section class="section" id="skills">
   <div class="wrap">
-    <div class="section-kicker">what I work with</div>
-    <div class="section-title">Skillsets</div>
+    <div class="section-head">
+      <span class="chip">What I work with</span>
+      <h2 class="section-title"><em>Skillsets</em></h2>
+    </div>
 
     <div class="skills-grid">
-      <div class="skill-card">
+      <div class="card skill-card">
+        <div class="icon-tile"><svg><use href="#icon-chart-up"/></svg></div>
         <h3>Growth &amp; Performance</h3>
         <div class="tagcloud">
-          <span class="tag-1">Growth Strategy</span>
-          <span class="tag-2">Performance Marketing</span>
-          <span class="tag-3">Paid Acquisition</span>
-          <span class="tag-4">Lead Generation</span>
-          <span class="tag-1">Conversion Rate Optimisation</span>
-          <span class="tag-2">Audience Targeting</span>
-          <span class="tag-3">Retargeting</span>
-          <span class="tag-4">A/B Testing</span>
+          <span>Growth Strategy</span><span>Performance Marketing</span><span>Paid Acquisition</span><span>Lead Generation</span><span>Conversion Rate Optimisation</span><span>Audience Targeting</span><span>Retargeting</span><span>A/B Testing</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="card skill-card">
+        <div class="icon-tile"><svg><use href="#icon-palette"/></svg></div>
         <h3>Content &amp; Brand</h3>
         <div class="tagcloud">
-          <span class="tag-2">Content Strategy</span>
-          <span class="tag-3">Social Media Marketing</span>
-          <span class="tag-4">Creative Direction</span>
-          <span class="tag-1">Copywriting</span>
-          <span class="tag-2">Ad Messaging</span>
-          <span class="tag-3">Email Marketing</span>
-          <span class="tag-4">Webinar Marketing</span>
-          <span class="tag-1">Community Building</span>
-          <span class="tag-2">SEO</span>
+          <span>Content Strategy</span><span>Social Media Marketing</span><span>Creative Direction</span><span>Copywriting</span><span>Ad Messaging</span><span>Email Marketing</span><span>Webinar Marketing</span><span>Community Building</span><span>SEO</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="card skill-card">
+        <div class="icon-tile"><svg><use href="#icon-workflow"/></svg></div>
         <h3>Funnels &amp; Automation</h3>
         <div class="tagcloud">
-          <span class="tag-3">Funnel Development</span>
-          <span class="tag-4">Landing Pages</span>
-          <span class="tag-1">Webinar Funnels</span>
-          <span class="tag-2">WhatsApp &amp; SMS Marketing</span>
-          <span class="tag-3">Lead Nurturing</span>
-          <span class="tag-4">Marketing Automation</span>
+          <span>Funnel Development</span><span>Landing Pages</span><span>Webinar Funnels</span><span>WhatsApp &amp; SMS Marketing</span><span>Lead Nurturing</span><span>Marketing Automation</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="card skill-card">
+        <div class="icon-tile"><svg><use href="#icon-bot"/></svg></div>
         <h3>AI &amp; Building</h3>
         <div class="tagcloud">
-          <span class="tag-4">AI Prompting</span>
-          <span class="tag-1">AI-Assisted Development</span>
-          <span class="tag-2">Functional Website Building</span>
-          <span class="tag-3">AI Tool Building</span>
-          <span class="tag-4">Workflow Automation</span>
-          <span class="tag-1">Rapid Prototyping</span>
+          <span>AI Prompting</span><span>AI-Assisted Development</span><span>Functional Website Building</span><span>AI Tool Building</span><span>Workflow Automation</span><span>Rapid Prototyping</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="card skill-card">
+        <div class="icon-tile"><svg><use href="#icon-sparkle"/></svg></div>
         <h3>AI Stack</h3>
         <div class="tagcloud">
-          <span class="tag-2">ChatGPT</span>
-          <span class="tag-3">Claude</span>
-          <span class="tag-4">Gemini</span>
-          <span class="tag-1">Perplexity</span>
-          <span class="tag-2">Gamma</span>
-          <span class="tag-3">Tella</span>
-          <span class="tag-4">Base44</span>
+          <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Perplexity</span><span>Gamma</span><span>Tella</span><span>Base44</span>
         </div>
       </div>
 
-      <div class="skill-card">
+      <div class="card skill-card">
+        <div class="icon-tile"><svg><use href="#icon-trend"/></svg></div>
         <h3>Analytics</h3>
         <div class="tagcloud">
-          <span class="tag-1">Campaign Analytics</span>
-          <span class="tag-2">Funnel Analytics</span>
-          <span class="tag-3">Performance Reporting</span>
-          <span class="tag-4">Audience Research</span>
-          <span class="tag-1">Competitor Analysis</span>
-          <span class="tag-2">Marketing Experimentation</span>
+          <span>Campaign Analytics</span><span>Funnel Analytics</span><span>Performance Reporting</span><span>Audience Research</span><span>Competitor Analysis</span><span>Marketing Experimentation</span>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="skill-card wide">
-        <h3>Marketing Stack</h3>
-        <div class="tagcloud">
-          <span class="tag-3">Meta Ads Manager</span>
-          <span class="tag-4">Google Ads</span>
-          <span class="tag-1">YouTube Ads</span>
-          <span class="tag-2">ManyChat</span>
-          <span class="tag-3">Interakt</span>
-          <span class="tag-4">Canva</span>
-          <span class="tag-1">Notion</span>
-          <span class="tag-2">Metricool</span>
-          <span class="tag-3">Buffer</span>
-        </div>
+  <div class="marquee" aria-label="Marketing Stack">
+    <div class="marquee-label">Marketing Stack</div>
+    <div class="marquee-track">
+      <div class="marquee-row">
+        <span>Meta Ads Manager</span><span>Google Ads</span><span>YouTube Ads</span><span>ManyChat</span><span>Interakt</span><span>Canva</span><span>Notion</span><span>Metricool</span><span>Buffer</span>
+      </div>
+      <div class="marquee-row" aria-hidden="true">
+        <span>Meta Ads Manager</span><span>Google Ads</span><span>YouTube Ads</span><span>ManyChat</span><span>Interakt</span><span>Canva</span><span>Notion</span><span>Metricool</span><span>Buffer</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WORK EXPERIENCE -->
-<section class="section" id="work">
+<section class="section section-soft" id="work">
   <div class="wrap">
-    <div class="section-kicker">the journey so far</div>
-    <div class="section-title">Work Experiences</div>
-    <div class="stack-hint">hover to open them one by one, click outside to close ✦</div>
+    <div class="section-head">
+      <span class="chip">The journey so far</span>
+      <h2 class="section-title">Work <em>Experiences</em></h2>
+    </div>
 
-    <div class="jobs-stack">
+    <div class="jobs">
 
     <!-- 1. RABBLEHUB -->
-    <div class="job">
-      <div class="job-head">
-        <div class="job-num">01</div>
-        <div>
-          <h3><a class="ig-link" href="https://www.instagram.com/rabblehub/?hl=en" target="_blank" rel="noopener">RabbleHub<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="job-role">Co-Founder · Marketing &amp; Sales · Mar 2026 – Present</div>
+    <details class="job" open>
+      <summary class="job-head">
+        <span class="job-num">01</span>
+        <span class="job-title">
+          <span class="job-name">RabbleHub</span>
+          <span class="job-role">Co-Founder · Marketing &amp; Sales</span>
+        </span>
+        <span class="job-date">Mar 2026 – Present</span>
+        <span class="job-toggle"><svg><use href="#icon-plus"/></svg></span>
+      </summary>
+      <div class="job-body">
+        <div class="job-top">
+          <div class="job-media">
+            <video src="Rabblehub.mp4" poster="rabblehub-poster.jpg" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div>
+            <p class="job-intro">RabbleHub is a career-support platform I co-founded to help job seekers get more interviews and referrals through personalised career support, automation and direct outreach.</p>
+            <a class="link-arrow" href="https://www.instagram.com/rabblehub/?hl=en" target="_blank" rel="noopener">RabbleHub on Instagram<svg><use href="#icon-external"/></svg></a>
+            <div class="job-label">What I Did</div>
+            <ul class="job-list">
+              <li>Co-founded RabbleHub as part of a <strong>3-person team</strong>, leading <strong>marketing and sales</strong>.</li>
+              <li>Defined the <strong>positioning and go-to-market strategy</strong> for the platform.</li>
+              <li>Used <strong>AI and automation</strong> to build and improve how the business operated.</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="job-media">
-        <video src="Rabblehub.mp4" poster="rabblehub-poster.jpg" muted loop playsinline preload="metadata"></video>
-      </div>
-      <p class="job-intro">RabbleHub is a career-support platform I co-founded to help job seekers get more interviews and referrals through personalised career support, automation and direct outreach.</p>
 
-      <div class="job-block">
-        <div class="job-label">What I Did</div>
-        <ul class="job-list">
-          <li>Co-founded RabbleHub as part of a <strong>3-person team</strong>, leading <strong>marketing and sales</strong>.</li>
-          <li>Defined the <strong>positioning and go-to-market strategy</strong> for the platform.</li>
-          <li>Used <strong>AI and automation</strong> to build and improve how the business operated.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
         <div class="job-label">Highlights</div>
         <div class="metric-grid">
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-rupee"/></svg></div><div class="metric-body"><div class="num">₹1 Lakh+ Revenue Generated</div><div class="desc">Generated revenue through RabbleHub's interview and referral assistance services.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-team"/></svg></div><div class="metric-body"><div class="num">3-Person Team</div><div class="desc">Built and operated the business with a lean founding team.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-bot"/></svg></div><div class="metric-body"><div class="num">Automated Job Applications</div><div class="desc">Built a system to identify relevant jobs based on a candidate's profile and support applications at scale.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-handshake"/></svg></div><div class="metric-body"><div class="num">Referral &amp; Outreach Assistance</div><div class="desc">Created workflows to identify relevant recruiters and professionals and initiate personalised outreach for referral opportunities.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-cv"/></svg></div><div class="metric-body"><div class="num">Personalised Career Curation</div><div class="desc">Worked on CV and LinkedIn positioning alongside job applications and referral efforts.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-rupee"/></svg></div><div><div class="num">₹1 Lakh+ Revenue Generated</div><div class="desc">Generated revenue through RabbleHub's interview and referral assistance services.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-team"/></svg></div><div><div class="num">3-Person Team</div><div class="desc">Built and operated the business with a lean founding team.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-bot"/></svg></div><div><div class="num">Automated Job Applications</div><div class="desc">Built a system to identify relevant jobs based on a candidate's profile and support applications at scale.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-handshake"/></svg></div><div><div class="num">Referral &amp; Outreach Assistance</div><div class="desc">Created workflows to identify relevant recruiters and professionals and initiate personalised outreach for referral opportunities.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-cv"/></svg></div><div><div class="num">Personalised Career Curation</div><div class="desc">Worked on CV and LinkedIn positioning alongside job applications and referral efforts.</div></div></div>
+        </div>
+
+        <div class="big-picture">
+          <div class="job-label">The Big Picture</div>
+          <p>RabbleHub was my move from <strong>growing existing businesses to building one of my own</strong>—figuring out the positioning, selling the service, getting customers and using AI and automation to make the whole process work with a small team.</p>
         </div>
       </div>
-
-      <div class="big-picture">
-        <div class="job-label">The Big Picture</div>
-        <p>RabbleHub was my move from <strong>growing existing businesses to building one of my own</strong>—figuring out the positioning, selling the service, getting customers and using AI and automation to make the whole process work with a small team.</p>
-      </div>
-    </div>
+    </details>
 
     <!-- 2. GOOCAMPUS -->
-    <div class="job">
-      <div class="job-head">
-        <div class="job-num">02</div>
-        <div>
-          <h3><a class="ig-link" href="https://www.instagram.com/goocampus/?hl=en" target="_blank" rel="noopener">GooCampus<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="job-role">Marketing Lead · Dec 2024 – Feb 2026</div>
+    <details class="job">
+      <summary class="job-head">
+        <span class="job-num">02</span>
+        <span class="job-title">
+          <span class="job-name">GooCampus</span>
+          <span class="job-role">Marketing Lead</span>
+        </span>
+        <span class="job-date">Dec 2024 – Feb 2026</span>
+        <span class="job-toggle"><svg><use href="#icon-plus"/></svg></span>
+      </summary>
+      <div class="job-body">
+        <div class="job-top">
+          <div class="job-media">
+            <video src="goocampus.mp4" poster="goocampus-poster.jpg" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div>
+            <p class="job-intro">GooCampus is an EdTech and career platform helping medical professionals make better decisions around education, specialisation and career opportunities in India and abroad.</p>
+            <a class="link-arrow" href="https://www.instagram.com/goocampus/?hl=en" target="_blank" rel="noopener">GooCampus on Instagram<svg><use href="#icon-external"/></svg></a>
+            <div class="job-label">What I Did</div>
+            <ul class="job-list">
+              <li>Led <strong>growth and performance marketing</strong> across <strong>11–12 education products</strong>, managing acquisition strategy through paid, organic, webinar and community-led campaigns.</li>
+              <li>Managed paid campaigns across <strong>Meta, Google and YouTube</strong>, including budgets, audience targeting, execution and optimisation.</li>
+              <li>Built <strong>landing pages and webinar funnels</strong>, along with <strong>WhatsApp, SMS and email workflows</strong> for lead capture, follow-ups and nurturing.</li>
+              <li>Managed <strong>Instagram, LinkedIn and YouTube</strong>, working with the content team on campaign messaging, creatives and distribution.</li>
+              <li>Tracked <strong>campaign and funnel performance</strong>, using testing and analytics to improve results and preparing monthly, quarterly and yearly reports.</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="job-media">
-        <video src="goocampus.mp4" poster="goocampus-poster.jpg" muted loop playsinline preload="metadata"></video>
-      </div>
-      <p class="job-intro">GooCampus is an EdTech and career platform helping medical professionals make better decisions around education, specialisation and career opportunities in India and abroad.</p>
 
-      <div class="job-block">
-        <div class="job-label">What I Did</div>
-        <ul class="job-list">
-          <li>Led <strong>growth and performance marketing</strong> across <strong>11–12 education products</strong>, managing acquisition strategy through paid, organic, webinar and community-led campaigns.</li>
-          <li>Managed paid campaigns across <strong>Meta, Google and YouTube</strong>, including budgets, audience targeting, execution and optimisation.</li>
-          <li>Built <strong>landing pages and webinar funnels</strong>, along with <strong>WhatsApp, SMS and email workflows</strong> for lead capture, follow-ups and nurturing.</li>
-          <li>Managed <strong>Instagram, LinkedIn and YouTube</strong>, working with the content team on campaign messaging, creatives and distribution.</li>
-          <li>Tracked <strong>campaign and funnel performance</strong>, using testing and analytics to improve results and preparing monthly, quarterly and yearly reports.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
         <div class="job-label">Highlights</div>
         <div class="metric-grid">
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-chart-up"/></svg></div><div class="metric-body"><div class="num">170.45% Growth in Lead Generation</div><div class="desc">Scaled lead generation through integrated paid, organic, webinar, email and WhatsApp-led funnels.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-target"/></svg></div><div class="metric-body"><div class="num">1,600+ Leads Generated</div><div class="desc">Generated leads through webinar-led and WhatsApp-based acquisition campaigns across multiple products.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-megaphone"/></svg></div><div class="metric-body"><div class="num">1,500+ Leads from One Webinar</div><div class="desc">Generated 1,500+ leads for the Medical PG Blueprint Webinar through Meta Ads, webinar funnels and WhatsApp follow-ups.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-rupee"/></svg></div><div class="metric-body"><div class="num">₹2–2.5L Monthly Ad Spend Managed</div><div class="desc">Managed and optimised monthly paid media budgets across Meta, Google and YouTube.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-grid"/></svg></div><div class="metric-body"><div class="num">11–12 Products Managed Simultaneously</div><div class="desc">Managed campaigns, funnels and messaging across multiple education products at the same time.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-chart-up"/></svg></div><div><div class="num">170.45% Growth in Lead Generation</div><div class="desc">Scaled lead generation through integrated paid, organic, webinar, email and WhatsApp-led funnels.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-target"/></svg></div><div><div class="num">1,600+ Leads Generated</div><div class="desc">Generated leads through webinar-led and WhatsApp-based acquisition campaigns across multiple products.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-megaphone"/></svg></div><div><div class="num">1,500+ Leads from One Webinar</div><div class="desc">Generated 1,500+ leads for the Medical PG Blueprint Webinar through Meta Ads, webinar funnels and WhatsApp follow-ups.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-rupee"/></svg></div><div><div class="num">₹2–2.5L Monthly Ad Spend Managed</div><div class="desc">Managed and optimised monthly paid media budgets across Meta, Google and YouTube.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-grid"/></svg></div><div><div class="num">11–12 Products Managed Simultaneously</div><div class="desc">Managed campaigns, funnels and messaging across multiple education products at the same time.</div></div></div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- 3. RESUME RISERS -->
-    <div class="job">
-      <div class="job-head">
-        <div class="job-num">03</div>
-        <div>
-          <h3><a class="ig-link" href="https://www.instagram.com/resumerisers/?hl=en" target="_blank" rel="noopener">Resume Risers<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="job-role">Marketing Manager · Co-Founder · July 2023 – April 2024</div>
+    <details class="job">
+      <summary class="job-head">
+        <span class="job-num">03</span>
+        <span class="job-title">
+          <span class="job-name">Resume Risers</span>
+          <span class="job-role">Marketing Manager · Co-Founder</span>
+        </span>
+        <span class="job-date">July 2023 – April 2024</span>
+        <span class="job-toggle"><svg><use href="#icon-plus"/></svg></span>
+      </summary>
+      <div class="job-body">
+        <div class="job-top">
+          <div class="job-media">
+            <video src="Resume risers.mp4" poster="resumerisers-poster.jpg" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div>
+            <p class="job-intro">Resume Risers is a career services venture where I co-led marketing and client acquisition while helping deliver personalised career profiling services.</p>
+            <a class="link-arrow" href="https://www.instagram.com/resumerisers/?hl=en" target="_blank" rel="noopener">Resume Risers on Instagram<svg><use href="#icon-external"/></svg></a>
+            <div class="job-label">What I Did</div>
+            <ul class="job-list">
+              <li>Co-led <strong>growth and client acquisition</strong> through Meta and Google Ads.</li>
+              <li>Managed <strong>client onboarding, communication and delivery workflows</strong>.</li>
+              <li>Optimised <strong>ad messaging and funnel flow</strong> to improve lead-to-sale conversion.</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="job-media">
-        <video src="Resume risers.mp4" poster="resumerisers-poster.jpg" muted loop playsinline preload="metadata"></video>
-      </div>
-      <p class="job-intro">Resume Risers is a career services venture where I co-led marketing and client acquisition while helping deliver personalised career profiling services.</p>
 
-      <div class="job-block">
-        <div class="job-label">What I Did</div>
-        <ul class="job-list">
-          <li>Co-led <strong>growth and client acquisition</strong> through Meta and Google Ads.</li>
-          <li>Managed <strong>client onboarding, communication and delivery workflows</strong>.</li>
-          <li>Optimised <strong>ad messaging and funnel flow</strong> to improve lead-to-sale conversion.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
         <div class="job-label">Highlights</div>
         <div class="metric-grid">
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-cv"/></svg></div><div class="metric-body"><div class="num">900+ Career Profiling Solutions Delivered</div><div class="desc">Delivered resume writing, LinkedIn optimisation and cover letter services to 900+ clients.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-megaphone"/></svg></div><div class="metric-body"><div class="num">Paid Acquisition</div><div class="desc">Used targeted Meta and Google campaigns to drive client acquisition.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-workflow"/></svg></div><div class="metric-body"><div class="num">End-to-End Client Workflow</div><div class="desc">Managed the journey from onboarding and communication through service delivery.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-cv"/></svg></div><div><div class="num">900+ Career Profiling Solutions Delivered</div><div class="desc">Delivered resume writing, LinkedIn optimisation and cover letter services to 900+ clients.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-megaphone"/></svg></div><div><div class="num">Paid Acquisition</div><div class="desc">Used targeted Meta and Google campaigns to drive client acquisition.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-workflow"/></svg></div><div><div class="num">End-to-End Client Workflow</div><div class="desc">Managed the journey from onboarding and communication through service delivery.</div></div></div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- 4. FIRST SIP -->
-    <div class="job">
-      <div class="job-head">
-        <div class="job-num">04</div>
-        <div>
-          <h3>First Sip</h3>
-          <div class="job-role">Social Media Manager · Co-Founder · Oct 2022 – May 2023</div>
-        </div>
-      </div>
-      <p class="job-intro">First Sip was a social media and marketing venture focused on helping brands build their presence through content and digital marketing.</p>
-
-      <div class="job-block">
+    <details class="job">
+      <summary class="job-head">
+        <span class="job-num">04</span>
+        <span class="job-title">
+          <span class="job-name">First Sip</span>
+          <span class="job-role">Social Media Manager · Co-Founder</span>
+        </span>
+        <span class="job-date">Oct 2022 – May 2023</span>
+        <span class="job-toggle"><svg><use href="#icon-plus"/></svg></span>
+      </summary>
+      <div class="job-body">
+        <p class="job-intro">First Sip was a social media and marketing venture focused on helping brands build their presence through content and digital marketing.</p>
         <div class="job-label">Highlights</div>
         <div class="metric-grid">
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-grid"/></svg></div><div class="metric-body"><div class="num">8–9 Brands Handled</div><div class="desc">Managed organic content and marketing across multiple brands with different audiences and requirements.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-palette"/></svg></div><div class="metric-body"><div class="num">Content &amp; Creative Development</div><div class="desc">Planned content and created social media creatives for different brands.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-chat"/></svg></div><div class="metric-body"><div class="num">Organic Social Media Marketing</div><div class="desc">Managed day-to-day organic marketing activities to build brand presence and audience engagement.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-grid"/></svg></div><div><div class="num">8–9 Brands Handled</div><div class="desc">Managed organic content and marketing across multiple brands with different audiences and requirements.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-palette"/></svg></div><div><div class="num">Content &amp; Creative Development</div><div class="desc">Planned content and created social media creatives for different brands.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-chat"/></svg></div><div><div class="num">Organic Social Media Marketing</div><div class="desc">Managed day-to-day organic marketing activities to build brand presence and audience engagement.</div></div></div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- 5. CLEAN HOMIES -->
-    <div class="job">
-      <div class="job-head">
-        <div class="job-num">05</div>
-        <div>
-          <h3><a class="ig-link" href="https://cleanhomies.com/" target="_blank" rel="noopener">Clean Homies<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="job-role">Content Marketer · Dec 2021 – Aug 2022</div>
-        </div>
-      </div>
-      <p class="job-intro">Clean Homies was an American cleaning tools brand that used SEO-driven content to promote and sell cleaning products through affiliate marketing.</p>
-
-      <div class="job-block">
+    <details class="job">
+      <summary class="job-head">
+        <span class="job-num">05</span>
+        <span class="job-title">
+          <span class="job-name">Clean Homies</span>
+          <span class="job-role">Content Marketer</span>
+        </span>
+        <span class="job-date">Dec 2021 – Aug 2022</span>
+        <span class="job-toggle"><svg><use href="#icon-plus"/></svg></span>
+      </summary>
+      <div class="job-body">
+        <p class="job-intro">Clean Homies was an American cleaning tools brand that used SEO-driven content to promote and sell cleaning products through affiliate marketing.</p>
+        <a class="link-arrow" href="https://cleanhomies.com/" target="_blank" rel="noopener">cleanhomies.com<svg><use href="#icon-external"/></svg></a>
         <div class="job-label">Highlights</div>
         <div class="metric-grid">
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-seo"/></svg></div><div class="metric-body"><div class="num">SEO Content Strategy</div><div class="desc">Created SEO briefs and content strategies designed to rank cleaning-related content and drive organic traffic.</div></div></div>
-          <div class="metric"><div class="metric-icon-wrap"><svg class="metric-icon"><use href="#icon-team"/></svg></div><div class="metric-body"><div class="num">Content Team Management</div><div class="desc">Managed a team of writers and ensured content followed SEO guidelines and the planned content strategy.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-seo"/></svg></div><div><div class="num">SEO Content Strategy</div><div class="desc">Created SEO briefs and content strategies designed to rank cleaning-related content and drive organic traffic.</div></div></div>
+          <div class="metric"><div class="icon-tile sm"><svg><use href="#icon-team"/></svg></div><div><div class="num">Content Team Management</div><div class="desc">Managed a team of writers and ensured content followed SEO guidelines and the planned content strategy.</div></div></div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- 6. OTHER EXPERIENCES -->
-    <div class="job">
-      <div class="job-head">
-        <div class="job-num">06</div>
-        <div>
-          <h3>Other Experiences</h3>
-          <div class="job-role">Freelance Marketing &amp; Content Roles</div>
+    <details class="job">
+      <summary class="job-head">
+        <span class="job-num">06</span>
+        <span class="job-title">
+          <span class="job-name">Other Experiences</span>
+          <span class="job-role">Freelance Marketing &amp; Content Roles</span>
+        </span>
+        <span class="job-date"></span>
+        <span class="job-toggle"><svg><use href="#icon-plus"/></svg></span>
+      </summary>
+      <div class="job-body">
+        <p class="job-intro">Alongside my core roles, I also worked on <strong>freelance projects</strong> across content, social media and creative marketing for different brands.</p>
+        <div class="freelance">
+          <table>
+            <thead>
+              <tr><th>Brand / Company</th><th>Role</th><th>What I Worked On</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="brand"><a class="ig-link" href="https://www.instagram.com/thetiggle_/?hl=en" target="_blank" rel="noopener">Tiggle<svg class="icon-external"><use href="#icon-external"/></svg></a></td><td class="role">Blog Writer</td><td>Created content for Tiggle, the Shark Tank-featured chocolate beverage brand.</td></tr>
+              <tr><td class="brand">Social Elixir</td><td class="role">Social Media Marketer</td><td>Worked on social media marketing and content for brand presence and engagement.</td></tr>
+              <tr><td class="brand">Treasure Tales</td><td class="role">Creative Copywriter</td><td>Created creative copy and content for brand communication.</td></tr>
+              <tr><td class="brand">Grateful Soul Media</td><td class="role">Creative Copywriter</td><td>Worked on creative copy and marketing content for brand communication.</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <p class="job-intro">Alongside my core roles, I also worked on <strong>freelance projects</strong> across content, social media and creative marketing for different brands.</p>
-
-      <div class="freelance">
-        <table>
-          <thead>
-            <tr><th>Brand / Company</th><th>Role</th><th>What I Worked On</th></tr>
-          </thead>
-          <tbody>
-            <tr><td class="brand"><a class="ig-link" href="https://www.instagram.com/thetiggle_/?hl=en" target="_blank" rel="noopener">Tiggle<svg class="icon-external"><use href="#icon-external"/></svg></a></td><td class="role">Blog Writer</td><td>Created content for Tiggle, the Shark Tank-featured chocolate beverage brand.</td></tr>
-            <tr><td class="brand">Social Elixir</td><td class="role">Social Media Marketer</td><td>Worked on social media marketing and content for brand presence and engagement.</td></tr>
-            <tr><td class="brand">Treasure Tales</td><td class="role">Creative Copywriter</td><td>Created creative copy and content for brand communication.</td></tr>
-            <tr><td class="brand">Grateful Soul Media</td><td class="role">Creative Copywriter</td><td>Worked on creative copy and marketing content for brand communication.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </details>
 
     </div>
-
   </div>
 </section>
 
 <!-- CASE STUDIES -->
-<section class="editorial" id="case-studies">
+<section class="section" id="case-studies">
   <div class="wrap">
-    <div class="section-kicker">case studies</div>
-    <div class="section-title">C Case Studies</div>
-    <h2 class="editorial-heading">How small brands grow into large followings overnight.</h2>
-
-    <div class="case">
-      <div class="case-grid">
-        <div class="case-visual" style="background-image:url('qaafi.png');">
-          <div class="case-icon-wrap icon-1"><svg class="case-icon"><use href="#icon-jar"/></svg></div>
-          <div class="case-stats">
-            <div class="case-stat"><span class="case-stat-num">15K</span><span class="case-stat-label">Followers</span></div>
-            <div class="case-stat"><span class="case-stat-num">72</span><span class="case-stat-label">Posts</span></div>
-          </div>
-        </div>
-        <div>
-          <div class="case-num">01 — QAAFI</div>
-          <h3><a class="ig-link" href="https://www.instagram.com/project_qaafi/?hl=en" target="_blank" rel="noopener">Project Qaafi<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="stats-line">15K followers. 72 posts.</div>
-          <p>That's the whole account, and off that they've pulled ELLE, Robb Report and a Vogue level press run. ELLE literally wrote that they couldn't tell if it was a skincare brand or a design studio. Here's why it works. Qaafi didn't start with a moodboard, they started with a hitlist. Founder Aahan Chatterjee brought in Bombay agency Erth Co and the first thing they did was define what they refused to look like. His words: name three Indian beauty brands doing well in the West and they're all Ayurveda, all kansa guashas hand welded by artisans in some village near Jaipur, all oils passed down five generations. Qaafi is a quiet rebellion against that. That's the entire philosophy. Not copying the West, not cosplaying heritage, and nobody else was standing in that gap. Everything else just stays consistent with it. The name comes from a phrase people already say, "zyada nahi, bas qaafi", so the positioning sits inside the word and needs zero explanation. The design mixes recycled paper, metallic tubes, black embossing and chunky type, minimal and maximal at once, deliberately not gendered. And the grid barely shows product. It's vintage sepia photos, Devanagari stacked on Latin, fake magazine covers, goats, a poster that reads "We Made A Beautiful Cap. You Found It Annoying. Okay, Fair." They post like a magazine and sell as a side effect. Worth being straight though, 15K isn't a big following and this isn't an overnight virality story. What Qaafi actually proves is that a sharply refused cliché buys you press, cult status and premium pricing at a follower count most founders would call a failure. The lever was never reach. It was having an enemy.</p>
-          <div class="case-takeaway icon-1">The lever was never reach. It was having an enemy.</div>
-        </div>
-      </div>
+    <div class="section-head">
+      <span class="chip">Case studies</span>
+      <h2 class="section-title">Case <em>Studies</em></h2>
+      <p class="section-sub">How small brands grow into large followings overnight.</p>
     </div>
 
-    <div class="case">
-      <div class="case-grid">
-        <div class="case-visual" style="background-image:url('notice.png');">
-          <div class="case-icon-wrap icon-2"><svg class="case-icon"><use href="#icon-clapper"/></svg></div>
-          <div class="case-stats">
-            <div class="case-stat"><span class="case-stat-num">40K</span><span class="case-stat-label">Followers</span></div>
-            <div class="case-stat"><span class="case-stat-num">228</span><span class="case-stat-label">Posts</span></div>
-          </div>
-        </div>
-        <div>
-          <div class="case-num">02 — NOTICE</div>
-          <h3><a class="ig-link" href="https://www.instagram.com/weare.notice/?hl=en" target="_blank" rel="noopener">Notice<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="stats-line">40K followers. 228 posts.</div>
-          <p>Bio says "Nothing like anything you've ever seen before. From India for the World." And what got them here is that Notice doesn't post product, they produce content. Literally. Scroll the grid and you hit "VHS WEEK, Season 01, Episode 04: MRS. JOTNANI" with a full credit roll in the caption. Director, producers, DoP, production designer, writer, editor, costume designer, composer, colourist, plus cast. A proper film crew. For an incense holder. Episode 02 is "Unpatented Straws", Episode 03 is "DTFT?". They built a fictional universe with recurring characters and let the product just live inside the frame, and it pulls 2,039 likes against a baseline of 118 to 300, so roughly 10x. Second thing, every object is treated like a release instead of a SKU. Cardbar, Totem Lamp, Spring Table, Bangle Vase, Mesh Shelf, Variable Tray, Tetrapod. Each gets its own pinned highlight and its own campaign, one reel literally opens on a card reading "PRODUCT #17". They number them. That's sneaker drop logic applied to home decor, so every launch is an event, not an inventory update, and the teasers do the rest, "SOMETHING IS UNDER PRESS", "COMING SOON TO NOTICE". Third, half the grid isn't even theirs. Creators film the lamp themselves, one caption just says "obsessed with the totem lamp from @weare.notice". Make an object weird enough to want in your own frame and your customers become your content team. Worth being straight though, their comments are full of people chasing orders. One reads "placed on 6th July, you guys keep saying it'll dispatch and nothing is happening, how many days for the refund", nine replies deep. So Notice is a real branding win with an ops problem sitting right behind it, and at 40K people the cracks show in public.</p>
-          <div class="case-takeaway icon-2">Make an object weird enough to want in your own frame and your customers become your content team.</div>
+    <article class="case">
+      <div class="case-visual">
+        <img src="qaafi.png" alt="Project Qaafi Instagram post">
+        <div class="case-stats">
+          <div class="case-stat"><span class="case-stat-num">15K</span><span class="case-stat-label">Followers</span></div>
+          <div class="case-stat"><span class="case-stat-num">72</span><span class="case-stat-label">Posts</span></div>
         </div>
       </div>
-    </div>
+      <div class="case-body">
+        <div class="case-num">01 — Qaafi</div>
+        <h3><a class="ig-link" href="https://www.instagram.com/project_qaafi/?hl=en" target="_blank" rel="noopener">Project Qaafi<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
+        <div class="stats-line">15K followers. 72 posts.</div>
+        <p>That's the whole account, and off that they've pulled ELLE, Robb Report and a Vogue level press run. ELLE literally wrote that they couldn't tell if it was a skincare brand or a design studio. Here's why it works. Qaafi didn't start with a moodboard, they started with a hitlist. Founder Aahan Chatterjee brought in Bombay agency Erth Co and the first thing they did was define what they refused to look like. His words: name three Indian beauty brands doing well in the West and they're all Ayurveda, all kansa guashas hand welded by artisans in some village near Jaipur, all oils passed down five generations. Qaafi is a quiet rebellion against that. That's the entire philosophy. Not copying the West, not cosplaying heritage, and nobody else was standing in that gap. Everything else just stays consistent with it. The name comes from a phrase people already say, "zyada nahi, bas qaafi", so the positioning sits inside the word and needs zero explanation. The design mixes recycled paper, metallic tubes, black embossing and chunky type, minimal and maximal at once, deliberately not gendered. And the grid barely shows product. It's vintage sepia photos, Devanagari stacked on Latin, fake magazine covers, goats, a poster that reads "We Made A Beautiful Cap. You Found It Annoying. Okay, Fair." They post like a magazine and sell as a side effect. Worth being straight though, 15K isn't a big following and this isn't an overnight virality story. What Qaafi actually proves is that a sharply refused cliché buys you press, cult status and premium pricing at a follower count most founders would call a failure. The lever was never reach. It was having an enemy.</p>
+        <blockquote class="case-takeaway">The lever was never reach. It was having an enemy.</blockquote>
+      </div>
+    </article>
 
-    <div class="case">
-      <div class="case-grid">
-        <div class="case-visual" style="background-image:url('khet.png');">
-          <div class="case-icon-wrap icon-3"><svg class="case-icon"><use href="#icon-spray"/></svg></div>
-          <div class="case-stats">
-            <div class="case-stat"><span class="case-stat-num">10K</span><span class="case-stat-label">Followers</span></div>
-            <div class="case-stat"><span class="case-stat-num">59</span><span class="case-stat-label">Posts</span></div>
-          </div>
-        </div>
-        <div>
-          <div class="case-num">03 — KHET</div>
-          <h3><a class="ig-link" href="https://www.instagram.com/khetperfumes/?hl=en" target="_blank" rel="noopener">Khet<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-          <div class="stats-line">10K followers. 59 posts.</div>
-          <p>Bio reads "Rewriting the Indian Perfume Story", and that's not a slogan, it's the actual model. Founders Madhav Narang and Arhum Jain started from one frustration, that most perfumes sold in India smelled like they belonged somewhere else, French gardens, Italian citrus groves, European woods. So instead of naming scents after abstract luxury, they named them after things every Indian recognises instantly. Kala Pani is the Andaman prison where freedom fighters were exiled, black pepper and seawater up top, amber and pine at the base. Then Tota Keri, Sweet Cigarettes, Snake Charmer, Chai &amp; Rum, Santri. Street snacks, childhood candy, travelling performers, colonial history. The story lives inside the product name, so the marketing writes itself and press picked them up without them chasing it. Second thing, the grid isn't a shop, it's a culture magazine. They post essays like "Men don't cry until daaru, two cents on how intoxication becomes gateway for platonic intimacy among male centric groups", and "Manja", on how in Punjab the manja is the invisible glue that holds a community together. That one did 474 likes against a baseline of 115 to 350. And the visual language is deliberately loud, bottles shot on newspaper spreads with oranges and chillies, while every other fragrance brand goes beige and empty. A founder on LinkedIn literally described finding them mid doomscroll, a perfume bottle on a bed of mangoes and red chillies with "Khet" across it, and being blown over by the artwork. Worth being straight though, 10K on 59 posts is small, and there's a second handle @khetparfums sitting at 1,878 followers running a farewell sale, so some brand tidying is happening in public. What Khet actually proves is simpler than scale. Build the story into the product name and you stop needing a content strategy to explain your brand.</p>
-          <div class="case-takeaway icon-3">Build the story into the product name and you stop needing a content strategy to explain your brand.</div>
+    <article class="case reverse">
+      <div class="case-visual">
+        <img src="notice.png" alt="Notice Instagram post">
+        <div class="case-stats">
+          <div class="case-stat"><span class="case-stat-num">40K</span><span class="case-stat-label">Followers</span></div>
+          <div class="case-stat"><span class="case-stat-num">228</span><span class="case-stat-label">Posts</span></div>
         </div>
       </div>
-    </div>
+      <div class="case-body">
+        <div class="case-num">02 — Notice</div>
+        <h3><a class="ig-link" href="https://www.instagram.com/weare.notice/?hl=en" target="_blank" rel="noopener">Notice<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
+        <div class="stats-line">40K followers. 228 posts.</div>
+        <p>Bio says "Nothing like anything you've ever seen before. From India for the World." And what got them here is that Notice doesn't post product, they produce content. Literally. Scroll the grid and you hit "VHS WEEK, Season 01, Episode 04: MRS. JOTNANI" with a full credit roll in the caption. Director, producers, DoP, production designer, writer, editor, costume designer, composer, colourist, plus cast. A proper film crew. For an incense holder. Episode 02 is "Unpatented Straws", Episode 03 is "DTFT?". They built a fictional universe with recurring characters and let the product just live inside the frame, and it pulls 2,039 likes against a baseline of 118 to 300, so roughly 10x. Second thing, every object is treated like a release instead of a SKU. Cardbar, Totem Lamp, Spring Table, Bangle Vase, Mesh Shelf, Variable Tray, Tetrapod. Each gets its own pinned highlight and its own campaign, one reel literally opens on a card reading "PRODUCT #17". They number them. That's sneaker drop logic applied to home decor, so every launch is an event, not an inventory update, and the teasers do the rest, "SOMETHING IS UNDER PRESS", "COMING SOON TO NOTICE". Third, half the grid isn't even theirs. Creators film the lamp themselves, one caption just says "obsessed with the totem lamp from @weare.notice". Make an object weird enough to want in your own frame and your customers become your content team. Worth being straight though, their comments are full of people chasing orders. One reads "placed on 6th July, you guys keep saying it'll dispatch and nothing is happening, how many days for the refund", nine replies deep. So Notice is a real branding win with an ops problem sitting right behind it, and at 40K people the cracks show in public.</p>
+        <blockquote class="case-takeaway">Make an object weird enough to want in your own frame and your customers become your content team.</blockquote>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-visual">
+        <img src="khet.png" alt="Khet Instagram post">
+        <div class="case-stats">
+          <div class="case-stat"><span class="case-stat-num">10K</span><span class="case-stat-label">Followers</span></div>
+          <div class="case-stat"><span class="case-stat-num">59</span><span class="case-stat-label">Posts</span></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-num">03 — Khet</div>
+        <h3><a class="ig-link" href="https://www.instagram.com/khetperfumes/?hl=en" target="_blank" rel="noopener">Khet<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
+        <div class="stats-line">10K followers. 59 posts.</div>
+        <p>Bio reads "Rewriting the Indian Perfume Story", and that's not a slogan, it's the actual model. Founders Madhav Narang and Arhum Jain started from one frustration, that most perfumes sold in India smelled like they belonged somewhere else, French gardens, Italian citrus groves, European woods. So instead of naming scents after abstract luxury, they named them after things every Indian recognises instantly. Kala Pani is the Andaman prison where freedom fighters were exiled, black pepper and seawater up top, amber and pine at the base. Then Tota Keri, Sweet Cigarettes, Snake Charmer, Chai &amp; Rum, Santri. Street snacks, childhood candy, travelling performers, colonial history. The story lives inside the product name, so the marketing writes itself and press picked them up without them chasing it. Second thing, the grid isn't a shop, it's a culture magazine. They post essays like "Men don't cry until daaru, two cents on how intoxication becomes gateway for platonic intimacy among male centric groups", and "Manja", on how in Punjab the manja is the invisible glue that holds a community together. That one did 474 likes against a baseline of 115 to 350. And the visual language is deliberately loud, bottles shot on newspaper spreads with oranges and chillies, while every other fragrance brand goes beige and empty. A founder on LinkedIn literally described finding them mid doomscroll, a perfume bottle on a bed of mangoes and red chillies with "Khet" across it, and being blown over by the artwork. Worth being straight though, 10K on 59 posts is small, and there's a second handle @khetparfums sitting at 1,878 followers running a farewell sale, so some brand tidying is happening in public. What Khet actually proves is simpler than scale. Build the story into the product name and you stop needing a content strategy to explain your brand.</p>
+        <blockquote class="case-takeaway">Build the story into the product name and you stop needing a content strategy to explain your brand.</blockquote>
+      </div>
+    </article>
   </div>
 </section>
 
 <!-- CAMPAIGNS -->
-<section class="section" id="campaigns">
+<section class="section section-soft" id="campaigns">
   <div class="wrap">
-    <div class="section-kicker">campaign teardowns</div>
-    <div class="section-title">How <a class="ig-link" href="https://www.instagram.com/zomato/?hl=en" target="_blank" rel="noopener">Zomato<svg class="icon-external"><use href="#icon-external"/></svg></a> Runs Campaigns</div>
-    <p style="max-width:720px; color:var(--ink-soft); margin-bottom:30px; line-height:1.7;">Went through their entire feed and the thing is, they don't add campaigns on top of their grid. They replace the grid. Three phases, three completely different feeds, same brand.</p>
+    <div class="section-head">
+      <span class="chip">Campaign teardowns</span>
+      <h2 class="section-title">How <a class="ig-link" href="https://www.instagram.com/zomato/?hl=en" target="_blank" rel="noopener">Zomato<svg class="icon-external"><use href="#icon-external"/></svg></a> Runs <em>Campaigns</em></h2>
+      <p class="section-sub">Went through their entire feed and the thing is, they don't add campaigns on top of their grid. They replace the grid. Three phases, three completely different feeds, same brand.</p>
+    </div>
 
-    <div class="journey">
-
-      <div class="stage" data-stage="1">
-        <div class="stage-inner">
-          <div class="stage-bg" style="background-image:url('Z1.png');"></div>
-          <div class="stage-collapsed">
-            <div class="stage-collapsed-chip">
-              <span class="stage-collapsed-tag">Phase 01</span>
-              <span class="stage-collapsed-title">Fuel Your Hustle</span>
-              <span class="stage-collapsed-hint">Click or hover to open</span>
-              <svg class="stage-collapsed-arrow"><use href="#icon-arrow-right"/></svg>
-            </div>
-          </div>
-          <div class="stage-content dark">
-            <div class="stage-top">
-              <span class="stage-tag">Phase 01</span>
-              <span class="stage-duration">1.5 Months</span>
-            </div>
-            <h3>Fuel Your Hustle</h3>
-            <div class="stage-media"><img src="Z1.png" alt="Fuel Your Hustle campaign screenshot"></div>
-            <p>Entire feed went black for 1.5 months. Red and white type on monochrome, zero colour. Tone flipped from sarcasm to full motivational. "The Bumrah Effect", "Start With Nothing", "Yes, I Am A Cheater". Looked like Nike, not a food app. They weren't selling orders, they were selling ambition.</p>
-          </div>
+    <div class="phases">
+      <div class="card phase">
+        <div class="phase-media"><img src="Z1.png" alt="Fuel Your Hustle campaign screenshot"></div>
+        <div class="phase-body">
+          <div class="phase-top"><span class="phase-tag">Phase 01</span><span class="phase-duration">1.5 Months</span></div>
+          <h3>Fuel Your Hustle</h3>
+          <p>Entire feed went black for 1.5 months. Red and white type on monochrome, zero colour. Tone flipped from sarcasm to full motivational. "The Bumrah Effect", "Start With Nothing", "Yes, I Am A Cheater". Looked like Nike, not a food app. They weren't selling orders, they were selling ambition.</p>
         </div>
       </div>
 
-      <div class="stage" data-stage="2">
-        <div class="stage-inner">
-          <div class="stage-bg" style="background-image:url('z2.png');"></div>
-          <div class="stage-collapsed">
-            <div class="stage-collapsed-chip">
-              <span class="stage-collapsed-tag">Phase 02</span>
-              <span class="stage-collapsed-title">Straight Outta Gully</span>
-              <span class="stage-collapsed-hint">Click or hover to open</span>
-              <svg class="stage-collapsed-arrow"><use href="#icon-arrow-right"/></svg>
-            </div>
-          </div>
-          <div class="stage-content color">
-            <div class="stage-top">
-              <span class="stage-tag">Phase 02</span>
-              <span class="stage-duration">IPL Season</span>
-            </div>
-            <h3>Straight Outta Gully</h3>
-            <div class="stage-media"><img src="z2.png" alt="Straight Outta Gully campaign screenshot"></div>
-            <p>IPL hits, grid shifts overnight. Colour comes back but street level. Brought actual cricket players into gully setups where locals played with them. "Khaa Maa Kasam", "What your office lunch says about you". Rode the entire IPL wave without paying for a single IPL sponsorship.</p>
-          </div>
+      <div class="card phase">
+        <div class="phase-media"><img src="z2.png" alt="Straight Outta Gully campaign screenshot"></div>
+        <div class="phase-body">
+          <div class="phase-top"><span class="phase-tag">Phase 02</span><span class="phase-duration">IPL Season</span></div>
+          <h3>Straight Outta Gully</h3>
+          <p>IPL hits, grid shifts overnight. Colour comes back but street level. Brought actual cricket players into gully setups where locals played with them. "Khaa Maa Kasam", "What your office lunch says about you". Rode the entire IPL wave without paying for a single IPL sponsorship.</p>
         </div>
       </div>
 
-      <div class="stage" data-stage="3">
-        <div class="stage-inner">
-          <div class="stage-bg" style="background-image:url('z3.png');"></div>
-          <div class="stage-collapsed">
-            <div class="stage-collapsed-chip">
-              <span class="stage-collapsed-tag">Phase 03</span>
-              <span class="stage-collapsed-title">Classic Zomato</span>
-              <span class="stage-collapsed-hint">Click or hover to open</span>
-              <svg class="stage-collapsed-arrow"><use href="#icon-arrow-right"/></svg>
-            </div>
-          </div>
-          <div class="stage-content classic">
-            <div class="stage-top">
-              <span class="stage-tag">Phase 03</span>
-              <span class="stage-duration">Home Base</span>
-            </div>
-            <h3>Classic <a class="ig-link" href="https://www.instagram.com/zomato/?hl=en" target="_blank" rel="noopener">Zomato<svg class="icon-external"><use href="#icon-external"/></svg></a></h3>
-            <div class="stage-media"><img src="z3.png" alt="Classic Zomato campaign screenshot"></div>
-            <p>Red comes back. Sarcasm comes back. "Biryani is dinner, not consent", "Parents shouldn't play favourites". This is home base, and that's exactly why the departures work. You can only break your pattern if the pattern is strong enough that people notice.</p>
-          </div>
+      <div class="card phase">
+        <div class="phase-media"><img src="z3.png" alt="Classic Zomato campaign screenshot"></div>
+        <div class="phase-body">
+          <div class="phase-top"><span class="phase-tag">Phase 03</span><span class="phase-duration">Home Base</span></div>
+          <h3>Classic Zomato</h3>
+          <p>Red comes back. Sarcasm comes back. "Biryani is dinner, not consent", "Parents shouldn't play favourites". This is home base, and that's exactly why the departures work. You can only break your pattern if the pattern is strong enough that people notice.</p>
         </div>
       </div>
-
     </div>
 
     <div class="takeaway">
-      <div class="label">The Actual Takeaway</div>
+      <div class="takeaway-label">The Actual Takeaway</div>
       <p>They change colour, mood and energy completely every cycle, but typography stays bold, caption voice stays confident, logo doesn't move. That's why it reads as one brand running three campaigns instead of three different brands.</p>
     </div>
   </div>
 </section>
 
 <!-- NEW AGE BRANDING -->
-<section class="postcards-section" id="new-age">
+<section class="section" id="new-age">
   <div class="wrap">
-    <div class="section-kicker">new age branding</div>
-    <div class="section-title">AI, Motion &amp; The New Grid</div>
+    <div class="section-head">
+      <span class="chip">New age branding</span>
+      <h2 class="section-title">AI, Motion &amp; The New <em>Grid</em></h2>
+    </div>
 
-    <div class="postcard-grid">
+    <div class="feature-grid">
+      <article class="card feature">
+        <div class="feature-media"><img src="noice.png" alt="Noice Instagram grid"></div>
+        <div class="feature-body">
+          <div class="stats-line">18K Followers · 267 Posts</div>
+          <h3>How <a class="ig-link" href="https://www.instagram.com/getnoice/?hl=en" target="_blank" rel="noopener">Noice<svg class="icon-external"><use href="#icon-external"/></svg></a> Uses AI in Branding</h3>
+          <p>Noice is Swiggy's private label on Instamart and their entire visual identity is AI generated characters. Not one campaign, not a gimmick, the whole feed. Every post is a 3D rendered mascot universe. A big blue guy cheating on his diet, a red potato character, an orange blob making birthday cake, characters wrestling burgers, faking phone calls, ragebailing gym bros. Captions are pure meme. "The perfect dosa shape doesn't exist", "Weird things humans do and how they should be punished", "How To Ragebait A Gym Bro". The whole thing looks like a Pixar movie that sells namkeen.</p>
+          <p>Here's why it works where most brands using AI imagery fail. Noice never pretended it was real. The characters are deliberately cartoonish, the worlds are obviously constructed, so there's no uncanny valley moment. It reads as a creative choice, not a budget shortcut. They built the brand identity around AI from day one instead of layering it on top of something that already existed, and that's the difference between AI as a style and AI as a stunt.</p>
+        </div>
+      </article>
 
-      <div class="postcard">
-        <svg class="sparkle s1"><use href="#icon-sparkle"/></svg>
-        <svg class="sparkle s2"><use href="#icon-sparkle"/></svg>
-        <svg class="sparkle s3"><use href="#icon-sparkle"/></svg>
-        <div class="postcard-photo">
-          <img src="noice.png" alt="Noice Instagram grid">
+      <article class="card feature">
+        <div class="feature-media"><video src="district.mp4" poster="district-poster.jpg" autoplay muted loop playsinline></video></div>
+        <div class="feature-body">
+          <div class="stats-line">Zomato's Going-Out App</div>
+          <h3>How <a class="ig-link" href="https://www.instagram.com/districtculture/?hl=en" target="_blank" rel="noopener">District<svg class="icon-external"><use href="#icon-external"/></svg></a> by <a class="ig-link" href="https://www.instagram.com/zomato/?hl=en" target="_blank" rel="noopener">Zomato<svg class="icon-external"><use href="#icon-external"/></svg></a> Uses Dynamic Carousels</h3>
+          <p>District is Zomato's going out app for movies, events, dining and nightlife. Their Instagram plays differently from Zomato's main page. Where Zomato runs on text heavy memes and sarcasm, District's grid is almost entirely animated and dynamic carousels with a design language nobody else in the Indian food or entertainment space is using. Bold motion graphics, seamless slide transitions where elements bleed from one frame into the next, heavy typography that moves as you swipe, and colour palettes that shift per campaign but always feel editorial and cinematic, never template.</p>
+          <p>The timing matters too. Instagram's algorithm in 2026 is actively pushing carousels, counting every swipe as a separate engagement event and rewarding completion rates, so brands using static posts are fighting uphill while District is feeding the algorithm exactly what it wants. But the real play isn't just format, it's that the carousels don't look like carousels. They look like magazine spreads that happen to move. Most brands using carousels in India right now are still on the Canva template grid, text card after text card with the same font and layout. District treats every carousel like a mini campaign with its own art direction, and that visual distinctiveness is what makes people stop, swipe through, and share, which is the exact behaviour Instagram is rewarding hardest right now.</p>
         </div>
-        <div class="postmark"></div>
-        <div class="postcard-meta">
-          <div><span class="meta-label">From</span> Noice</div>
-          <div><span class="meta-label">To</span> Your Feed</div>
-        </div>
-        <div class="stats-line">18K Followers · 267 Posts</div>
-        <h3 class="postcard-title">How <a class="ig-link" href="https://www.instagram.com/getnoice/?hl=en" target="_blank" rel="noopener">Noice<svg class="icon-external"><use href="#icon-external"/></svg></a> Uses AI in Branding</h3>
-        <p>Noice is Swiggy's private label on Instamart and their entire visual identity is AI generated characters. Not one campaign, not a gimmick, the whole feed. Every post is a 3D rendered mascot universe. A big blue guy cheating on his diet, a red potato character, an orange blob making birthday cake, characters wrestling burgers, faking phone calls, ragebailing gym bros. Captions are pure meme. "The perfect dosa shape doesn't exist", "Weird things humans do and how they should be punished", "How To Ragebait A Gym Bro". The whole thing looks like a Pixar movie that sells namkeen.</p>
-        <p style="margin-top:12px;">Here's why it works where most brands using AI imagery fail. Noice never pretended it was real. The characters are deliberately cartoonish, the worlds are obviously constructed, so there's no uncanny valley moment. It reads as a creative choice, not a budget shortcut. They built the brand identity around AI from day one instead of layering it on top of something that already existed, and that's the difference between AI as a style and AI as a stunt.</p>
-      </div>
-
-      <div class="postcard">
-        <svg class="sparkle s1"><use href="#icon-sparkle"/></svg>
-        <svg class="sparkle s2"><use href="#icon-sparkle"/></svg>
-        <svg class="sparkle s3"><use href="#icon-sparkle"/></svg>
-        <div class="postcard-photo">
-          <video src="district.mp4" poster="district-poster.jpg" autoplay muted loop playsinline></video>
-        </div>
-        <div class="postmark"></div>
-        <div class="postcard-meta">
-          <div><span class="meta-label">From</span> District</div>
-          <div><span class="meta-label">To</span> Your Feed</div>
-        </div>
-        <div class="stats-line">Zomato's Going-Out App</div>
-        <h3 class="postcard-title">How <a class="ig-link" href="https://www.instagram.com/districtculture/?hl=en" target="_blank" rel="noopener">District<svg class="icon-external"><use href="#icon-external"/></svg></a> by <a class="ig-link" href="https://www.instagram.com/zomato/?hl=en" target="_blank" rel="noopener">Zomato<svg class="icon-external"><use href="#icon-external"/></svg></a> Uses Dynamic Carousels</h3>
-        <p>District is Zomato's going out app for movies, events, dining and nightlife. Their Instagram plays differently from Zomato's main page. Where Zomato runs on text heavy memes and sarcasm, District's grid is almost entirely animated and dynamic carousels with a design language nobody else in the Indian food or entertainment space is using. Bold motion graphics, seamless slide transitions where elements bleed from one frame into the next, heavy typography that moves as you swipe, and colour palettes that shift per campaign but always feel editorial and cinematic, never template.</p>
-        <p style="margin-top:12px;">The timing matters too. Instagram's algorithm in 2026 is actively pushing carousels, counting every swipe as a separate engagement event and rewarding completion rates, so brands using static posts are fighting uphill while District is feeding the algorithm exactly what it wants. But the real play isn't just format, it's that the carousels don't look like carousels. They look like magazine spreads that happen to move. Most brands using carousels in India right now are still on the Canva template grid, text card after text card with the same font and layout. District treats every carousel like a mini campaign with its own art direction, and that visual distinctiveness is what makes people stop, swipe through, and share, which is the exact behaviour Instagram is rewarding hardest right now.</p>
-      </div>
-
+      </article>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section" id="testimonials">
+<section class="section section-soft" id="testimonials">
   <div class="wrap">
-    <div class="section-kicker">what people say</div>
-    <div class="section-title">Testimonials</div>
+    <div class="section-head">
+      <span class="chip">What people say</span>
+      <h2 class="section-title"><em>Testimonials</em></h2>
+    </div>
 
-    <div class="testimonial-deck">
-      <button class="t-arrow prev" type="button" aria-label="Previous testimonial"><svg><use href="#icon-arrow-right"/></svg></button>
-      <button class="t-arrow next" type="button" aria-label="Next testimonial"><svg><use href="#icon-arrow-right"/></svg></button>
-      <div class="testimonial-stack">
+    <div class="testimonials">
+      <figure class="card testimonial">
+        <blockquote>There's no better writer than the one who listens to the requirements with empathy. Sramana is one of them. She understood my company tone, language and overall requirements for the blog and submitted top-class articles on time. I absolutely recommend her because of her deep research skills and ability to catch things faster.</blockquote>
+        <figcaption><span class="avatar">AK</span><span><span class="t-name">Anuva Kakkar</span><span class="t-role">Founder, Tiggle Chocolate Drinks · As Seen on Shark Tank India</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="1">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">There's no better writer than the one who listens to the requirements with empathy. Sramana is one of them. She understood my company tone, language and overall requirements for the blog and submitted top-class articles on time. I absolutely recommend her because of her deep research skills and ability to catch things faster.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Anuva Kakkar</div>
-            <div class="testimonial-role">Founder, Tiggle Chocolate Drinks · As Seen on Shark Tank India</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>Sramana is a keen learner. She has the openness and receptiveness of an amateur and the discipline of a professional. She is eager to understand our requirements and works with us to deliver our essentials. She is an excellent student. Works diligently with all her heart in bringing out a good piece. If she doesn't understand a brief she takes the effort to reach out to you. She doesn't rest until she...</blockquote>
+        <figcaption><span class="avatar">GK</span><span><span class="t-name">Geetha Krishnan</span><span class="t-role">Business Process Leader · International Speaker &amp; Facilitator · Bestselling Co-author</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="2">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">Sramana is a keen learner. She has the openness and receptiveness of an amateur and the discipline of a professional. She is eager to understand our requirements and works with us to deliver our essentials. She is an excellent student. Works diligently with all her heart in bringing out a good piece. If she doesn't understand a brief she takes the effort to reach out to you. She doesn't rest until she...</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Geetha Krishnan</div>
-            <div class="testimonial-role">Business Process Leader · International Speaker &amp; Facilitator · Bestselling Co-author</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>I have known Sramana from very recent times. We got connected over LinkedIn when I got to read one of the amazing posts she writes over the platform. I offered her to work for my new EdTech venture and she took up the project. She is a beautiful writer with a fresh thought process. Her zeal to write and on time delivery is an adjuvant trait to her professionalism. I wish her all the luck for all her future endeavours.</blockquote>
+        <figcaption><span class="avatar">VT</span><span><span class="t-name">Virat Tuli</span><span class="t-role">Founder, Soulitaire &amp; Grateful Soul Media · Co-Founder, Success Psyche</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="3">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">I have known Sramana from very recent times. We got connected over LinkedIn when I got to read one of the amazing posts she writes over the platform. I offered her to work for my new EdTech venture and she took up the project. She is a beautiful writer with a fresh thought process. Her zeal to write and on time delivery is an adjuvant trait to her professionalism. I wish her all the luck for all her future endeavours.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Virat Tuli</div>
-            <div class="testimonial-role">Founder, Soulitaire &amp; Grateful Soul Media · Co-Founder, Success Psyche</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>Sramana is a helpful person, I would highly recommend her as a SEO content writer. She guided to enhance my content writing skill.</blockquote>
+        <figcaption><span class="avatar">AU</span><span><span class="t-name">Abhijeet Upadhyay</span><span class="t-role">Paid Social @ WPP Media · Performance Marketer</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="4">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">Sramana is a helpful person, I would highly recommend her as a SEO content writer. She guided to enhance my content writing skill.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Abhijeet Upadhyay</div>
-            <div class="testimonial-role">Paid Social @ WPP Media · Performance Marketer</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>Sramana is very industrious and observant and I can vouch on the fact that her work needs minimal iteration. She is open to learning which makes her versatile and it has been wonderful working with her. I wish her the best in this career path. You go girl! Cheers!!</blockquote>
+        <figcaption><span class="avatar">JD</span><span><span class="t-name">Joy D.</span><span class="t-role">Business Process Leader</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="5">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">Sramana is very industrious and observant and I can vouch on the fact that her work needs minimal iteration. She is open to learning which makes her versatile and it has been wonderful working with her. I wish her the best in this career path. You go girl! Cheers!!</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Joy D.</div>
-            <div class="testimonial-role">Business Process Leader</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>I had connected with 1on1 consultation call with Sramana. She has great knowledge about SEO and content writing. I was captivated by the insights she shared. Sramana was so friendly and explained every question with patience. I would highly recommend Sramana for any client who is looking for SEO specialised content.</blockquote>
+        <figcaption><span class="avatar">PR</span><span><span class="t-name">Priyanka Ravichandran</span><span class="t-role">Aspiring Strategy Consultant · Kairos &amp; GGI YLP Fellow</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="6">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">I had connected with 1on1 consultation call with Sramana. She has great knowledge about SEO and content writing. I was captivated by the insights she shared. Sramana was so friendly and explained every question with patience. I would highly recommend Sramana for any client who is looking for SEO specialised content.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Priyanka Ravichandran</div>
-            <div class="testimonial-role">Aspiring Strategy Consultant · Kairos &amp; GGI YLP Fellow</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>I had 1:1 consultation call with Sramana. I was already moved by her insightful post and she upgraded herself via call too. She have a massive knowledge about SEO. Not only this, but she made it easy to understand, and especially beginner friendly. We discussed everything from basics of content writing to actually managing everything on our own....</blockquote>
+        <figcaption><span class="avatar">KJ</span><span><span class="t-name">Kiran Joshi</span><span class="t-role">Content Writer</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="7">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">I had 1:1 consultation call with Sramana. I was already moved by her insightful post and she upgraded herself via call too. She have a massive knowledge about SEO. Not only this, but she made it easy to understand, and especially beginner friendly. We discussed everything from basics of content writing to actually managing everything on our own....</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Kiran Joshi</div>
-            <div class="testimonial-role">Content Writer</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>I got on a consultation call with Sramana and learnt a lot in such a short span of time. I got to know a lot about her and the way she work. I got to learn about SEO, writing, freelancing and how to get clients. It was simply amazing.</blockquote>
+        <figcaption><span class="avatar">MK</span><span><span class="t-name">Manisha Kaushal</span><span class="t-role">Freelance Content Writer · Copywriter · Ghostwriter</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="8">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">I got on a consultation call with Sramana and learnt a lot in such a short span of time. I got to know a lot about her and the way she work. I got to learn about SEO, writing, freelancing and how to get clients. It was simply amazing.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Manisha Kaushal</div>
-            <div class="testimonial-role">Freelance Content Writer · Copywriter · Ghostwriter</div>
-          </div>
-        </div>
+      <figure class="card testimonial">
+        <blockquote>I had a 1:1 consultation call with Sramana and I'm glad that I talked with her. She gave me great insights on SEO as well as LinkedIn. I got to learn a lot from her. She was really patient and solved all my queries not only from that topic but also other queries on content writing. I'd highly recommend Sramana, if you want to start your journey in content writing.</blockquote>
+        <figcaption><span class="avatar">AM</span><span><span class="t-name">Astha Ayusha Mall</span><span class="t-role">Independent Scholar · Academic Writer</span></span></figcaption>
+      </figure>
 
-        <div class="testimonial-card" data-i="9">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">I had a 1:1 consultation call with Sramana and I'm glad that I talked with her. She gave me great insights on SEO as well as LinkedIn. I got to learn a lot from her. She was really patient and solved all my queries not only from that topic but also other queries on content writing. I'd highly recommend Sramana, if you want to start your journey in content writing.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Astha Ayusha Mall</div>
-            <div class="testimonial-role">Independent Scholar · Academic Writer</div>
-          </div>
-        </div>
-
-        <div class="testimonial-card" data-i="10">
-          <svg class="t-star star-1"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-2"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-3"><use href="#icon-sparkle"/></svg>
-          <svg class="t-star star-4"><use href="#icon-sparkle"/></svg>
-          <svg class="quote-mark"><use href="#icon-quote"/></svg>
-          <p class="testimonial-quote">Had a great session with Sramana... was very fruitful and knowledgeable too. Would highly recommend her for anyone to get complete knowledge about content writing specially ones who have just started.</p>
-          <div class="testimonial-who">
-            <div class="testimonial-name">Khushboo Jandwani</div>
-            <div class="testimonial-role">Freelance Content Writer · Generating More Sales Through Content</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="testimonial-controls">
-        <div class="testimonial-counter"><span class="t-current">1</span> / <span class="t-total">10</span></div>
-        <div class="testimonial-dots">
-          <span class="t-dot active"></span><span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
-          <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
-        </div>
-      </div>
+      <figure class="card testimonial">
+        <blockquote>Had a great session with Sramana... was very fruitful and knowledgeable too. Would highly recommend her for anyone to get complete knowledge about content writing specially ones who have just started.</blockquote>
+        <figcaption><span class="avatar">KJ</span><span><span class="t-name">Khushboo Jandwani</span><span class="t-role">Freelance Content Writer · Generating More Sales Through Content</span></span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -787,17 +644,25 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <h2>Let's build something ✦</h2>
-    <p>Open to new work and good challenges. Reach out about growth, brand strategy, or career profiling.</p>
-    <div class="contact-links">
-      <a href="mailto:sramanagirihere@gmail.com">✉ sramanagirihere@gmail.com</a>
-      <a href="https://www.linkedin.com/in/socialgrowth-sramana-giri-/" target="_blank" rel="noopener">in LinkedIn</a>
+    <div class="contact-panel">
+      <span class="chip chip-dark">Contact</span>
+      <h2>Let's build <em>something</em></h2>
+      <p>Open to new work and good challenges. Reach out about growth, brand strategy, or career profiling.</p>
+      <div class="contact-links">
+        <a class="btn btn-light btn-lg" href="mailto:sramanagirihere@gmail.com"><svg><use href="#icon-mail"/></svg>sramanagirihere@gmail.com</a>
+        <a class="btn btn-outline-light btn-lg" href="https://www.linkedin.com/in/socialgrowth-sramana-giri-/" target="_blank" rel="noopener"><svg><use href="#icon-linkedin"/></svg>LinkedIn</a>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 · Built with care, one pixel at a time.</footer>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="logo" href="#home"><span class="logo-mark">S</span><span class="logo-word">Portfolio</span></a>
+    <span>© 2026 · Built with care, one pixel at a time.</span>
+  </div>
+</footer>
 
-<script src="script.js?v=15"></script>
+<script src="script.js?v=16"></script>
 </body>
 </html>

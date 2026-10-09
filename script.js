@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   let active = -1;
+  // the dragon waits a little below each pin, so the start of a rail never feels crowded
+  function startGap() { return window.innerWidth <= 640 ? 72 : 124; }
 
   function measure() {
     rails.forEach(function (r) {
@@ -111,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return Math.min(r.height, sub.getBoundingClientRect().bottom - top);
       });
       if (r.stations.length) r.stations[r.stations.length - 1] = r.height;
+      r.start = Math.min(startGap(), (r.stations[0] || 0) * 0.5);
+      if (r.current < r.start) r.current = r.start;
       if (r.dots.length !== r.stations.length) {
         r.dots.forEach(function (d) { d.remove(); });
         r.dots = r.stations.map(function () {
@@ -126,8 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // scroll position along a rail -> dragon position, holding still for a beat at each station
-  function mapToTrack(raw, stations) {
-    let prev = 0, prevDwell = 0;
+  function mapToTrack(raw, stations, start) {
+    let prev = start, prevDwell = 0;
+    raw = Math.max(raw, start);
     for (let i = 0; i < stations.length; i++) {
       const s = stations[i];
       const dwell = Math.min(140, (s - prev) * 0.22);
@@ -148,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let nextActive = 0;
     rails.forEach(function (r, i) {
       const raw = marker - r.el.getBoundingClientRect().top;
-      r.target = mapToTrack(Math.max(0, Math.min(raw, r.height + 400)), r.stations);
+      r.target = mapToTrack(Math.max(0, Math.min(raw, r.height + 400)), r.stations, r.start);
+      r.reached = raw >= r.start;
       if (raw >= 0) nextActive = i;      // the last rail whose start has been reached
     });
     if (nextActive !== active) {
@@ -177,7 +183,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function render(r) {
     r.dragon.style.transform = 'translateY(' + r.current.toFixed(1) + 'px)';
-    r.progress.style.height = r.current.toFixed(1) + 'px';
+    // the ridden part of the line only darkens once the dragon has actually set off
+    r.progress.style.height = (r.reached ? r.current : 0).toFixed(1) + 'px';
     let passed = 0;
     r.stations.forEach(function (s, i) {
       const done = r.current >= s - 1;

@@ -280,7 +280,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 @keyframes marquee { to { transform: translateX(-100%); } }
 
 /* ---------- Work ---------- */
-.jobs { display: flex; flex-direction: column; gap: 88px; }
+.jobs { display: flex; flex-direction: column; gap: 0; }
 /* every experience is open — no toggles; each card fades in as it scrolls into view */
 .job {
   background: var(--card);
@@ -343,7 +343,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 /* ---------- Work: long-form case study (RabbleHub) ----------
    Editorial flow: heading left / prose right, hairlines between blocks,
    thin vertical connectors, framed visuals, lots of air. */
-.study { margin-bottom: 72px; }
+.study { margin-bottom: 0; }
 .st-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 72px; }
 .st-label, .st-num {
   font-size: 11.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--faint);
@@ -366,7 +366,12 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 
 .st-block { position: relative; padding: 104px 0; border-top: 1px solid var(--line); }
 .st-intro + .st-block { margin-top: 88px; }
-.st-num { margin-bottom: 14px; }
+.st-num {                   /* section numbers: large but faded, so they guide without shouting */
+  margin-bottom: 10px;
+  font-family: var(--display); font-size: clamp(30px, 2.8vw, 40px); font-weight: 500;
+  letter-spacing: -0.02em; text-transform: none; line-height: 1;
+  color: rgba(17, 17, 17, .2);
+}
 .st-title { font-size: clamp(30px, 3.1vw, 42px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 500; }
 .st-title-lg { font-size: clamp(34px, 4vw, 54px); max-width: 680px; line-height: 1.05; }
 .st-side { margin-top: 22px; color: var(--muted); font-size: 17px; line-height: 1.75; max-width: 360px; }
@@ -721,6 +726,73 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .hi-peek-frame { width: 270px; }
 }
 
+/* sleek rule between experiences */
+.tl-divider {
+  border: 0; height: 1px; margin: 96px 0 132px -84px;
+  background: linear-gradient(90deg, rgba(17,17,17,0), rgba(17,17,17,.22) 10%, rgba(17,17,17,.22) 90%, rgba(17,17,17,0));
+}
+
+/* GooCampus visuals ------------------------------------------------------- */
+.st-after-rows { margin-top: 28px; }
+.st-hero-stat { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
+.st-hero-stat .st-stat { font-size: clamp(44px, 4.6vw, 64px); }
+
+.st-compare {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 20px;
+  margin: 48px 0 44px 16%; max-width: 860px;
+}
+.st-compare-card {
+  padding: 28px 30px 30px; border-radius: var(--radius);
+  background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.st-compare-card h5 { margin: 14px 0 8px; font-family: var(--display); font-size: clamp(24px, 2.4vw, 30px); font-weight: 500; letter-spacing: -0.025em; }
+.st-compare-card p { font-size: 17px; line-height: 1.6; color: var(--muted); }
+.st-compare-vs { align-self: center; font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--faint); }
+
+.st-capture { margin: 48px 0 32px; }
+.st-capture-row { display: grid; grid-template-columns: 1.1fr 28px 1fr 28px 1fr; align-items: center; gap: 14px; margin-top: 18px; }
+.st-capture-sources { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.st-capture-sources span {
+  padding: 10px 12px; border-radius: 10px; text-align: center;
+  background: var(--card); border: 1px solid var(--line);
+  font-size: 15px; font-weight: 500;
+}
+.st-capture-arrow { width: 22px; height: 22px; color: var(--ink); justify-self: center; }
+.st-capture-node {
+  display: flex; flex-direction: column; gap: 6px; padding: 18px 18px 20px; border-radius: 12px;
+  background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+}
+.st-capture-node strong { font-family: var(--display); font-weight: 500; font-size: 17px; line-height: 1.3; }
+.st-capture-node .st-step { margin-bottom: 4px; }
+.st-capture-node.is-dark { background: #161616; border-color: #161616; color: #fff; }
+.st-capture-node.is-dark strong { color: #fff; font-size: clamp(30px, 3vw, 40px); letter-spacing: -0.03em; }
+.st-capture-node .st-step svg { width: 12px; height: 12px; color: var(--ink); }
+.st-capture-node.is-dark span { font-size: 14.5px; color: rgba(255,255,255,.7); line-height: 1.5; }
+
+.st-steps-4 { grid-template-columns: repeat(4, 1fr); }
+
+.st-growth { margin: 26px 0 28px; display: grid; gap: 12px; }
+.st-growth-row { display: grid; grid-template-columns: 120px 1fr 64px; align-items: center; gap: 14px; }
+.st-growth-label { font-size: 14.5px; color: var(--muted); }
+.st-growth-bar { position: relative; height: 14px; border-radius: 999px; background: rgba(17,17,17,.06); overflow: hidden; }
+.st-growth-bar::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w); border-radius: 999px; background: rgba(17,17,17,.28); }
+.st-growth-row.is-after .st-growth-bar::after { background: #161616; }
+.st-growth-row strong { font-family: var(--display); font-weight: 500; font-size: 19px; text-align: right; }
+
+@media (max-width: 960px) {
+  .tl-divider { margin: 72px 0 104px -52px; }
+  .st-compare { margin-left: 0; }
+  .st-capture-row { grid-template-columns: 1fr; }
+  .st-capture-arrow { transform: rotate(90deg); }
+}
+@media (max-width: 640px) {
+  .tl-divider { margin: 56px 0 88px -40px; }
+  .st-compare { grid-template-columns: 1fr; gap: 12px; }
+  .st-compare-vs { justify-self: center; }
+  .st-steps-4 { grid-template-columns: 1fr; }
+  .st-growth-row { grid-template-columns: 92px 1fr 52px; gap: 10px; }
+}
+
 /* ---------- Case studies ---------- */
 .case {
   display: grid; grid-template-columns: 360px 1fr; gap: 64px; align-items: start;
@@ -890,7 +962,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .takeaway { grid-template-columns: 1fr; gap: 14px; padding: 32px; }
   .job-head { padding: 28px 28px 22px; }
   .job-body { padding: 28px 28px 32px; }
-  .jobs { gap: 64px; }
+  .jobs { gap: 0; }
   .job-top { grid-template-columns: 1fr; gap: 24px; }
   .case, .case.reverse { grid-template-columns: 1fr; gap: 32px; }
   .case-visual { position: relative; top: 0; max-width: 360px; }
@@ -912,7 +984,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .job-date { font-size: 14px; }
   .job-name { font-size: 23px; }
   .job-body { padding: 22px 20px 26px; }
-  .jobs { gap: 48px; }
+  .jobs { gap: 0; }
   .metric-grid { grid-template-columns: 1fr; }
   .case { padding: 48px 0; }
   .case-visual { max-width: none; aspect-ratio: 4 / 5; }

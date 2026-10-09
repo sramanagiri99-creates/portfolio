@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) entry.target.play().catch(function () {});
+      const card = entry.target.closest('.study');
+      if (entry.isIntersecting && (!card || card.classList.contains('is-open'))) entry.target.play().catch(function () {});
       else entry.target.pause();
     });
   }, { threshold: 0.25 });
@@ -206,8 +207,9 @@ document.addEventListener('DOMContentLoaded', function () {
   measure();
 });
 
-// Work experience cards — closed by default. "Click to open" unfolds the full case study;
-// its line and dragon fade in a beat later. "Close" folds it back and returns to the card.
+// Work experience cards — closed by default: a short peek under a progressive blur with
+// "Click to open" on top. Opening unfolds the full case study; the pin drops in and, a beat
+// later, the line and dragon appear. "Close" folds it back and returns to the card.
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.study').forEach(function (study) {
     const toggles = study.querySelectorAll('.study-toggle');
@@ -215,24 +217,36 @@ document.addEventListener('DOMContentLoaded', function () {
     let railTimer = null;
 
     function setOpen(open) {
-      study.classList.toggle('is-open', open);
-      toggles.forEach(function (t) { t.setAttribute('aria-expanded', String(open)); });
       clearTimeout(railTimer);
+      toggles.forEach(function (t) { t.setAttribute('aria-expanded', String(open)); });
       if (open) {
+        study.classList.add('is-open');
+        body.style.maxHeight = body.scrollHeight + 'px';          // animate to the real height…
         railTimer = setTimeout(function () {
           study.classList.add('rail-on');
           window.dispatchEvent(new Event('timeline:change'));
         }, 1100);
       } else {
-        study.classList.remove('rail-on', 'is-expanded');
+        body.style.maxHeight = body.scrollHeight + 'px';          // …and back from it
+        study.classList.remove('is-expanded', 'rail-on', 'is-open');
+        body.getBoundingClientRect();                              // commit the start height
+        body.style.maxHeight = '';                                 // falls back to the peek
         study.querySelectorAll('video').forEach(function (v) { v.pause(); });
       }
       window.dispatchEvent(new Event('timeline:change'));
     }
 
     body.addEventListener('transitionend', function (e) {
-      if (e.target !== body || e.propertyName !== 'grid-template-rows') return;
-      if (study.classList.contains('is-open')) study.classList.add('is-expanded');
+      if (e.target !== body || e.propertyName !== 'max-height') return;
+      if (study.classList.contains('is-open')) {
+        body.style.maxHeight = 'none';                             // free to grow (videos, images)
+        study.classList.add('is-expanded');
+        // the intro video may already be on screen — start it now that the card is open
+        study.querySelectorAll('.st-frame-video video').forEach(function (v) {
+          const r = v.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) v.play().catch(function () {});
+        });
+      }
       window.dispatchEvent(new Event('timeline:change'));
     });
 

@@ -856,6 +856,19 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 /* characters inside a white card: their cream backdrop maps to white, not yellow */
 .study .funnel-frame video { filter: url(#cream-to-white); }
 
+/* role + timeline, small, right under each name (always visible, even when the card is closed) */
+.st-subline {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px;
+  margin-top: 16px; font-size: 14.5px; line-height: 1.45;
+}
+.st-sub-role { color: var(--ink-2); font-weight: 500; }
+.st-sub-time { display: inline-flex; align-items: center; gap: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.st-sub-time::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--faint); }
+@media (max-width: 640px) {
+  .st-subline { flex-direction: column; align-items: flex-start; gap: 2px; margin-top: 12px; }
+  .st-sub-time::before { display: none; }
+}
+
 /* names sized to the card's column so the link arrow stays beside them */
 .study .st-name { font-size: clamp(40px, 4.6vw, 64px); }
 .study .st-name-sm { font-size: clamp(34px, 3.6vw, 50px); }

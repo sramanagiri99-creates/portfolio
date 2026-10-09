@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=37">
+<link rel="stylesheet" href="style.css?v=39">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -567,9 +567,13 @@
       <!-- 00 — At a glance -->
       <section class="st-block tl-sub">
         <div class="st-grid">
-          <div class="st-left">
+          <div class="st-left st-glance-left">
             <div class="st-num">00</div>
             <h4 class="st-title">At a glance</h4>
+            <!-- character looks through her telescope toward the numbers; plays as it scrolls into view -->
+            <div class="st-glance-char char-video" aria-hidden="true">
+              <video src="g1.mp4" muted loop playsinline preload="auto"></video>
+            </div>
           </div>
           <div class="st-right">
             <div class="st-stats">
@@ -646,13 +650,13 @@
           <div class="st-compare-card">
             <span class="st-label">Postgraduate opportunities</span>
             <h5>MBBS students</h5>
-            <p>Were often making the decision themselves.</p>
+            <p>Doctors who had already finished their MBBS and were exploring postgraduate options were adults with a clear career goal, so they were often making the decision themselves.</p>
           </div>
           <div class="st-compare-vs" aria-hidden="true">vs</div>
           <div class="st-compare-card">
-            <span class="st-label">Private medical colleges</span>
+            <span class="st-label">UG medical opportunities</span>
             <h5>Parents</h5>
-            <p>Were much more involved in the decision.</p>
+            <p>For undergraduate medical seats, such as admission to a private medical college, the student is usually just out of school. So parents were much more involved in choosing the college and making the decision.</p>
           </div>
         </div>
         <div class="st-grid">
@@ -704,7 +708,11 @@
           <h4 class="st-title st-title-lg">Building a webinar-led acquisition model</h4>
         </div>
         <div class="st-grid">
-          <div class="st-left"></div>
+          <div class="st-left st-funnel-char" aria-hidden="true">
+            <div class="funnel-frame webinar-frame char-video">
+              <video src="g3.mp4" muted loop playsinline preload="auto"></video>
+            </div>
+          </div>
           <div class="st-right st-prose">
             <p>I introduced and developed webinars as a recurring acquisition channel, particularly for products helping medical professionals explore careers abroad.</p>
             <p>The model combined <strong>expert-led Instagram Lives with interactive webinars</strong>, where domain-specific tutors could answer practical questions from potential candidates.</p>

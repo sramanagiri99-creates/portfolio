@@ -668,7 +668,10 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
      "darken" then keeps the page wherever the backdrop is, and the character everywhere else */
   mix-blend-mode: darken;
 }
-.st-funnel-char { position: static !important; }   /* not sticky, so the blend reaches the page */
+.st-funnel-char { position: static !important; }
+/* crop g3.mp4 (1080x1350) to x 120–1000, y 90–1300 — headroom for her hair */
+.webinar-frame { aspect-ratio: 880 / 1210; }
+.webinar-frame video { width: 122.73%; left: -13.64%; top: -7.44%; }   /* not sticky, so the blend reaches the page */
 /* crop g2.mp4 (1080x1350) to x 150–990, y 230–1290 (room around her for the feather); backdrop matched to the yellow */
 .funnel-frame video { position: absolute; width: 128.57%; max-width: none; height: auto; left: -17.86%; top: -21.7%; filter: url(#cream-to-yellow); }
 
@@ -677,9 +680,34 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   position: relative; margin-top: 44px;
   display: flex; justify-content: flex-end;
   perspective: 900px;
+  margin-right: -118px;        /* reach under the text card, so her cut side is hidden behind it */
 }
-.hi-peek-frame::after {      /* the edge she's peeking around — tilts with her */
-  content: ""; position: absolute; right: 0; top: 4%; bottom: 0; width: 2px; z-index: 1;
+/* soften the bottom of the clip so there's no hard edge under her */
+.hi-peek-frame {
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+}
+
+/* the About text sits on a raised card, angled slightly toward the reader */
+.about-grid { perspective: 1600px; }
+.about-text {
+  position: relative; z-index: 2;
+  padding: 48px 52px 52px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 1px 2px rgba(17,17,17,.04),
+    0 18px 40px -18px rgba(17,17,17,.18),
+    0 60px 90px -50px rgba(17,17,17,.22),
+    -24px 0 50px -30px rgba(17,17,17,.18);
+  transform: rotateY(-3deg) rotateX(.8deg);
+  transform-origin: right center;
+  transition: transform .8s var(--ease);
+}
+.about-text:hover { transform: rotateY(-1.5deg) rotateX(.4deg); }
+.hi-peek-frame::after {      /* (edge line retired — the text card is now what she peeks from behind) */
+  content: none; position: absolute; right: 0; top: 4%; bottom: 0; width: 2px; z-index: 1;
   border-radius: 2px;
   background: linear-gradient(to bottom, rgba(17,17,17,0), rgba(17,17,17,.55) 18%, rgba(17,17,17,.55) 82%, rgba(17,17,17,0));
 }
@@ -957,6 +985,9 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .hero-feats { grid-template-columns: repeat(2, 1fr); gap: 32px; padding-left: 0; }
   .about-grid, .linkedin-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-head { position: static; }
+  .hi-peek { margin-right: 0; }
+  .about-text { transform: none; padding: 36px 32px 40px; }
+  .about-text:hover { transform: none; }
   .phases { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
   .feature-grid { grid-template-columns: 1fr; }
   .takeaway { grid-template-columns: 1fr; gap: 14px; padding: 32px; }

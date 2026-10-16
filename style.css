@@ -192,17 +192,17 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 }
 .hero-copy { align-self: start; padding: 72px 0 0 6%; max-width: 560px; }
 .hero-title {
-  font-size: clamp(32px, 3.4vw, 46px);
-  line-height: 1.18;
-  letter-spacing: -0.03em;
+  font-size: clamp(44px, 5.2vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
   font-weight: 500;
 }
 .hero-title .ig-link { border-bottom: 1px solid var(--line-strong); }
 .hero-title .ig-link:hover { border-bottom-color: var(--ink); }
 .hero-headline {
-  margin-top: 22px;
-  font-size: 17px;
-  line-height: 1.6;
+  margin-top: 24px; max-width: 460px;
+  font-size: clamp(19px, 1.6vw, 22px);
+  line-height: 1.5;
   color: var(--muted);
 }
 .hero-headline em { color: var(--ink); font-size: 1.12em; }
@@ -220,13 +220,18 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   width: 100%; max-width: 470px; height: auto;
 }
 
+.hero-feats-label {
+  margin-top: 48px; padding: 28px 0 0 3%;
+  border-top: 1px solid var(--line);
+  font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--faint);
+}
 .hero-feats {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
-  padding: 48px 0 0 3%;
+  padding: 24px 0 0 3%;
 }
 .hero-feat svg { width: 24px; height: 24px; color: var(--ink); }
-.hero-feat h3 { margin: 16px 0 8px; font-size: 16.5px; line-height: 1.3; letter-spacing: -0.015em; }
-.hero-feat p { font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+.hero-feat h3 { margin: 16px 0 8px; font-size: 18px; line-height: 1.3; letter-spacing: -0.015em; }
+.hero-feat p { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 260px; }
 
 /* ---------- About ---------- */
 .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
@@ -1196,6 +1201,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .hero-copy { padding: 40px 0 0; }
   .hero-visual img { max-width: 400px; }
   .hero-feats { grid-template-columns: repeat(2, 1fr); gap: 32px; padding-left: 0; }
+  .hero-feats-label { padding-left: 0; }
   .about-grid, .linkedin-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-head { position: static; }
   .hi-peek { margin-right: 0; }

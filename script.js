@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Videos inside the case study and the job cards — play only while on screen
 document.addEventListener('DOMContentLoaded', function () {
-  const videos = document.querySelectorAll('.st-frame-video video, .job-media video');
+  const videos = document.querySelectorAll('.st-frame-video video, .st-phone video, .job-media video');
   if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
         body.style.maxHeight = 'none';                             // free to grow (videos, images)
         study.classList.add('is-expanded');
         // the intro video may already be on screen — start it now that the card is open
-        study.querySelectorAll('.st-frame-video video').forEach(function (v) {
+        study.querySelectorAll('.st-frame-video video, .st-phone video').forEach(function (v) {
           const r = v.getBoundingClientRect();
           if (r.top < window.innerHeight && r.bottom > 0) v.play().catch(function () {});
         });

@@ -1004,21 +1004,37 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .st-insight-metrics strong { font-family: var(--display); font-weight: 500; font-size: 17px; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
 .st-insight-metrics span { font-size: 10.5px; color: var(--muted); letter-spacing: -0.01em; white-space: nowrap; }
 
-/* link to the full report */
-.st-report {
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  margin-top: 32px; padding: 22px 24px; border-radius: var(--radius);
-  background: #161616; color: #fff;
-  box-shadow: 0 18px 40px -22px rgba(0,0,0,.5);
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+/* the full-year report, framed right under the creatives as the next step of the story */
+.st-insights-lead { font-family: var(--display); font-size: clamp(20px, 1.9vw, 24px) !important; line-height: 1.4 !important; color: var(--ink) !important; letter-spacing: -0.015em; }
+.st-insights-head p + p { margin-top: 10px; }
+.st-insights-head strong { color: var(--ink); font-weight: 600; }
+.st-fullreport {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: space-between; gap: 28px;
+  margin-top: 20px; padding: 30px 32px;
+  border-radius: var(--radius); background: #161616; color: #fff;
+  box-shadow: 0 24px 50px -26px rgba(0,0,0,.55);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
-.st-report:hover { transform: translateY(-2px); box-shadow: 0 26px 50px -24px rgba(0,0,0,.6); }
-.st-report-text { display: flex; flex-direction: column; gap: 4px; }
-.st-report .st-label { color: rgba(255,255,255,.5); }
-.st-report-text strong { font-family: var(--display); font-weight: 500; font-size: 20px; letter-spacing: -0.02em; color: #fff; }
-.st-report-text > span:last-child { font-size: 14px; color: rgba(255,255,255,.65); }
-.st-report-icon { flex-shrink: 0; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: #fff; color: #161616; }
-.st-report-icon svg { width: 16px; height: 16px; }
+.st-fullreport::before {      /* soft light so the panel reads as a highlight, not a block */
+  content: ""; position: absolute; inset: -60% -20% auto auto; width: 60%; height: 200%;
+  background: radial-gradient(closest-side, rgba(255,255,255,.10), transparent 70%); pointer-events: none;
+}
+.st-fullreport:hover { transform: translateY(-2px); box-shadow: 0 32px 60px -28px rgba(0,0,0,.65); }
+.st-fullreport-text { position: relative; display: flex; flex-direction: column; gap: 8px; max-width: 640px; }
+.st-fullreport .st-label { color: rgba(255,255,255,.55); }
+.st-fullreport-text strong { font-family: var(--display); font-weight: 600; font-size: clamp(24px, 2.4vw, 32px); letter-spacing: -0.03em; line-height: 1.1; color: #fff; }
+.st-fullreport-text > span:last-child { font-size: 16.5px; line-height: 1.6; color: rgba(255,255,255,.72); }
+.st-fullreport-text b { color: #fff; font-weight: 600; }
+.st-fullreport-cta {
+  position: relative; flex-shrink: 0; display: inline-flex; align-items: center; gap: 10px;
+  height: 50px; padding: 0 22px; border-radius: 999px; background: #fff; color: #161616;
+  font-size: 15px; font-weight: 600; white-space: nowrap;
+}
+.st-fullreport-cta svg { width: 14px; height: 14px; }
+
+/* a quiet hand-off from the results to the "how" */
+.st-bridge { margin-top: 28px; font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.45; color: var(--muted); }
 
 @media (max-width: 960px) { .st-insights-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) {
@@ -1026,8 +1042,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .st-insight-thumb { width: 150px; }
   .st-insight-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 14px; }
   .st-insight-metrics span { font-size: 11px; }
-  .st-report { padding: 18px; }
-  .st-report-text strong { font-size: 17px; }
+  .st-fullreport { flex-direction: column; align-items: flex-start; padding: 24px 22px; gap: 20px; }
+  .st-fullreport-cta { width: 100%; justify-content: center; }
 }
 
 /* Resume Risers / First Sip visuals ------------------------------------- */
